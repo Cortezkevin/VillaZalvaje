@@ -6,6 +6,7 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
+.vs/VillaZalvaje
 
 # Archivos de configuración de usuario
 UserSettings/
@@ -24,6 +25,8 @@ UserSettings/
 
 # Archivos de VS Code
 .vscode/
+.vsconfig
+.vs/
 
 # Sistema operativo
 .DS_Store
