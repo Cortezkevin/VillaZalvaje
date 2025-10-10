@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\UTP\\9-10\\JUEGOS INTERACTIVOS 1\\proyecto\\VillaZalvaje\\",
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|d:\\utp\\9-10\\juegos interactivos 1\\proyecto\\villazalvaje\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|c:\\users\\usuario\\desktop\\dj_proyect\\villazalvaje\\assets\\scripts\\enemy\\enemymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|c:\\users\\usuario\\desktop\\dj_proyect\\villazalvaje\\assets\\scripts\\enemy\\playerawernesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\playerawernesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "D:\\UTP\\9-10\\JUEGOS INTERACTIVOS 1\\proyecto\\VillaZalvaje\\Assets\\Scripts\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
-              "ToolTip": "D:\\UTP\\9-10\\JUEGOS INTERACTIVOS 1\\proyecto\\VillaZalvaje\\Assets\\Scripts\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAIAwwBQAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PlayerAwernessController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Enemy\\PlayerAwernessController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\PlayerAwernessController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Enemy\\PlayerAwernessController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\PlayerAwernessController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T22:58:03.996Z",
+              "WhenOpened": "2025-10-10T17:13:56.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Enemy\\EnemyMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyMovement.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Enemy\\EnemyMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyMovement.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAIwCEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T17:12:50.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T16:58:06.251Z",
               "EditorCaption": ""
             }
           ]
