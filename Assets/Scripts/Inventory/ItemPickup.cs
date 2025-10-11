@@ -1,12 +1,12 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ItemPickup : MonoBehaviour
 {
     [Header("Item Data")]
-    public ItemData itemData; // El ScriptableObject del item
+    public ItemData itemData;
 
     [Header("Pickup Settings")]
-    public KeyCode pickupKey = KeyCode.G;
     public float pickupRange = 2f;
 
     private Transform player;
@@ -14,25 +14,37 @@ public class ItemPickup : MonoBehaviour
 
     void Start()
     {
-        // Buscar el player por tag
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
         {
             player = playerObj.transform;
+            Debug.Log("Player encontrado: " + player.name);
+        }
+        else
+        {
+            Debug.LogError("No se encontró ningún objeto con tag 'Player'!");
         }
     }
 
     void Update()
     {
-        if (player == null) return;
+        if (player == null)
+        {
+            Debug.LogWarning("Player es null en Update");
+            return;
+        }
 
-        // Calcular distancia al jugador
         float distance = Vector3.Distance(transform.position, player.position);
         canPickup = distance <= pickupRange;
 
-        // Si está cerca y presiona G
-        if (canPickup && Input.GetKeyDown(pickupKey))
+        if (canPickup)
         {
+            Debug.Log("Dentro del rango! Distancia: " + distance + " - Presiona G");
+        }
+
+        if (canPickup && Keyboard.current.gKey.wasPressedThisFrame)
+        {
+            Debug.Log("Tecla G presionada!");
             PickupItem();
         }
     }
@@ -45,22 +57,26 @@ public class ItemPickup : MonoBehaviour
             return;
         }
 
-        // Intentar agregar al inventario
+        Debug.Log("Intentando recoger: " + itemData.itemName);
+
         if (InventoryManager.Instance != null)
         {
             if (InventoryManager.Instance.AddItem(itemData))
             {
-                Debug.Log("Recogiste: " + itemData.itemName);
-                Destroy(gameObject); // Destruir el item del mundo
+                Debug.Log("Item recogido exitosamente: " + itemData.itemName);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Debug.Log("No se pudo agregar el item");
             }
         }
         else
         {
-            Debug.LogError("No se encontró InventoryManager en la escena!");
+            Debug.LogError("No se encontró InventoryManager!");
         }
     }
 
-    // Visualizar el rango en el editor
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
