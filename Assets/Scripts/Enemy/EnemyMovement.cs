@@ -9,6 +9,15 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private float rotationSpeed;
 
+    [Header("Combat Settings")]
+    [SerializeField]
+    private int damageAmount = 10; // Daño que hace al jugador
+
+    [SerializeField]
+    private float damageInterval = 1f; // Cada cuánto puede hacer daño (en segundos)
+
+    private float lastDamageTime = 0f;
+
     private Rigidbody2D rigidbody;
     private PlayerAwernessController playerAwernessController;
     private Vector2 targetDireccion;
@@ -62,5 +71,34 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    // Detectar colisión con el jugador
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            DamagePlayer();
+        }
+    }
 
+    // Mantener daño mientras está tocando al jugador
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (Time.time >= lastDamageTime + damageInterval)
+            {
+                DamagePlayer();
+            }
+        }
+    }
+
+    private void DamagePlayer()
+    {
+        if (PlayerStats.Instance != null)
+        {
+            PlayerStats.Instance.TakeDamage(damageAmount);
+            lastDamageTime = Time.time;
+            Debug.Log("Zombie hizo " + damageAmount + " de daño al jugador!");
+        }
+    }
 }
