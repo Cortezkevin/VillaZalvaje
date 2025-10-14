@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5e9e96b640dad804c89ae6984dc118ea
+guid: 21e7c2c1996d7d1448450119da12b1c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7400798384094905104
-    second: Particle Sprite_0
+      213: -1000635814303466103
+    second: portada_0003_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Particle Sprite_0
+      name: portada_0003_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 10
-        height: 10
+        x: 0
+        y: 0
+        width: 1188
+        height: 666
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01303425beae4b660800000000000000
-      internalID: 7400798384094905104
+      spriteID: 98d78ea47070d12f0800000000000000
+      internalID: -1000635814303466103
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Particle Sprite_0: 7400798384094905104
+      portada_0003_0: -1000635814303466103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

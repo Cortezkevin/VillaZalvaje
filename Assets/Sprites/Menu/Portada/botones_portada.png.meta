@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 5e9e96b640dad804c89ae6984dc118ea
+guid: 454f12982df72ed4c9e62bc0a72ff8d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7400798384094905104
-    second: Particle Sprite_0
+      213: 6541949931874783785
+    second: botones_portada_0
+  - first:
+      213: 310569131630824598
+    second: botones_portada_1
+  - first:
+      213: 7441014812484492324
+    second: botones_portada_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Particle Sprite_0
+      name: botones_portada_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 10
-        height: 10
+        x: 31
+        y: 561
+        width: 861
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01303425beae4b660800000000000000
-      internalID: 7400798384094905104
+      spriteID: 92299c36dcca9ca50800000000000000
+      internalID: 6541949931874783785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones_portada_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 309
+        width: 861
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c8e01dafc5f4400800000000000000
+      internalID: 310569131630824598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones_portada_2
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 57
+        width: 866
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42cde8a3c8bc34760800000000000000
+      internalID: 7441014812484492324
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Particle Sprite_0: 7400798384094905104
+      botones_portada_0: 6541949931874783785
+      botones_portada_1: 310569131630824598
+      botones_portada_2: 7441014812484492324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
