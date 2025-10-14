@@ -4,14 +4,13 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 15f;
     public int damage = 20;
-    public float lifetime = 2f;
-
+    public float lifeTime = 2f;
     private Vector2 direction;
 
     public void SetDirection(Vector2 dir)
     {
         direction = dir.normalized;
-        Destroy(gameObject, lifetime);
+        Destroy(gameObject, lifeTime); // destruir después de un tiempo
     }
 
     void Update()
@@ -19,13 +18,13 @@ public class Bullet : MonoBehaviour
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        EnemyStats enemy = other.GetComponent<EnemyStats>();
-        if (enemy != null)
+        EnemyStats enemy = collision.GetComponent<EnemyStats>();
+        if (enemy != null && enemy.IsAlive())
         {
             enemy.TakeDamage(damage);
-            Debug.Log($"🔫 Impacto a {other.name} por {damage} de daño.");
+            Debug.Log($"Bala impactó a {enemy.name} por {damage} de daño");
             Destroy(gameObject);
         }
     }

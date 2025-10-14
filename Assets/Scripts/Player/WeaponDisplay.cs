@@ -34,6 +34,12 @@ public class WeaponDisplay : MonoBehaviour
     public int knifeDamage = 25;
     public float knifeAngle = 45f;
 
+    [Header("Gun Settings")]
+    public GameObject bulletPrefab;
+    public Transform firePoint; 
+    public float fireRate = 0.3f;
+    private float lastFireTime;
+
     [Header("Animation Settings - Gun")]
     public float gunRecoilDistance = 0.2f;
     public float gunRecoilSpeed = 20f;
@@ -169,6 +175,13 @@ public class WeaponDisplay : MonoBehaviour
                 StartCoroutine(KnifeSlashAnimation());
                 break;
             case "Gun":
+                if (Time.time - lastFireTime >= fireRate)
+                {
+                    StartCoroutine(GunRecoilAnimation());
+                    FireBullet();
+                    lastFireTime = Time.time;
+                }
+                break;
             case "Shotgun":
                 StartCoroutine(GunRecoilAnimation());
                 break;
@@ -183,6 +196,41 @@ public class WeaponDisplay : MonoBehaviour
                 break;
         }
     }
+
+    private void FireBullet()
+    {
+        if (bulletPrefab == null || firePoint == null)
+        {
+            Debug.LogWarning("BulletPrefab o FirePoint no asignado en el inspector!");
+            return;
+        }
+
+        // --- Calcular posición del mouse en world (robusto y siempre correcto) ---
+        Vector3 mousePos = Mouse.current.position.ReadValue();
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mousePos);
+        mouseWorldPos.z = 0f;
+
+        // Dirección desde el firePoint hacia el cursor
+        Vector2 direction = (mouseWorldPos - firePoint.position).normalized;
+
+        // Instanciar la bala en el firePoint
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+        // Ajustar rotación de la bala para que apunte en la dirección correcta
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        bullet.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        // Enviar dirección al script de la bala (si existe)
+        Bullet bulletScript = bullet.GetComponent<Bullet>();
+        if (bulletScript != null)
+        {
+            bulletScript.SetDirection(direction);
+        }
+
+        Debug.Log("Disparo ejecutado hacia: " + direction);
+    }
+
+
 
     // ANIMACIÓN: Cortar con cuchillo (ACTUALIZADA CON DAÑO)
     private IEnumerator KnifeSlashAnimation()

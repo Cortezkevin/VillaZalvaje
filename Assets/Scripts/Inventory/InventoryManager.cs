@@ -111,7 +111,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (selectionIndicator == null)
         {
-            Debug.LogWarning("Selection Indicator no está asignado!");
+            Debug.LogWarning("Selection Indicator no estï¿½ asignado!");
             return;
         }
 
@@ -132,14 +132,14 @@ public class InventoryManager : MonoBehaviour
         // Mostrar el indicador
         selectionIndicator.SetActive(true);
 
-        // Obtener la posición del slot seleccionado automáticamente
+        // Obtener la posiciï¿½n del slot seleccionado automï¿½ticamente
         RectTransform slotRect = itemSlots[selectedSlot].GetComponent<RectTransform>();
         RectTransform indicatorRect = selectionIndicator.GetComponent<RectTransform>();
 
-        // Copiar la posición del slot al indicador
+        // Copiar la posiciï¿½n del slot al indicador
         indicatorRect.anchoredPosition = slotRect.anchoredPosition;
 
-        Debug.Log("Indicador movido a posición: " + indicatorRect.anchoredPosition);
+        Debug.Log("Indicador movido a posiciï¿½n: " + indicatorRect.anchoredPosition);
     }
 
     private void UpdateUI()
