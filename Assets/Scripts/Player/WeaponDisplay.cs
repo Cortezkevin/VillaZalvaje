@@ -79,6 +79,12 @@ public class WeaponDisplay : MonoBehaviour
         {
             UseWeapon();
         }
+
+        if (Keyboard.current.rKey.wasPressedThisFrame && !isReloading)
+        {
+            StartCoroutine(ReloadGun());
+        }
+
     }
 
     private void UpdateWeaponDisplay()
@@ -180,10 +186,21 @@ public class WeaponDisplay : MonoBehaviour
                 StartCoroutine(KnifeSlashAnimation());
                 break;
             case "Gun":
+                if (isReloading)
+                    return;
+
+                if (currentAmmo <= 0)
+                {
+                    Debug.Log("¡Sin balas! Recarga con 'R'");
+                    return;
+                }
+
                 if (Time.time - lastFireTime >= fireRate)
                 {
                     StartCoroutine(GunRecoilAnimation());
                     FireBullet();
+                    currentAmmo--; 
+                    Debug.Log("Balas restantes: " + currentAmmo);
                     lastFireTime = Time.time;
                 }
                 break;
@@ -233,6 +250,25 @@ public class WeaponDisplay : MonoBehaviour
         }
 
         Debug.Log("Disparo ejecutado hacia: " + direction);
+    }
+
+    private IEnumerator ReloadGun()
+    {
+        if (currentAmmo == maxAmmo)
+        {
+            Debug.Log("Cargador lleno");
+            yield break;
+        }
+
+        isReloading = true;
+        Debug.Log("Recargando...");
+
+        // (Opcional) Aquí podrías reproducir una animación o sonido
+        yield return new WaitForSeconds(reloadTime);
+
+        currentAmmo = maxAmmo;
+        isReloading = false;
+        Debug.Log("Recarga completa");
     }
 
 
