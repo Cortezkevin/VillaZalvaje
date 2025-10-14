@@ -39,6 +39,10 @@ public class WeaponDisplay : MonoBehaviour
     public Transform firePoint; 
     public float fireRate = 0.3f;
     private float lastFireTime;
+    public int maxAmmo = 7;           
+    public int currentAmmo;           
+    public float reloadTime = 1.5f;   
+    private bool isReloading = false;
 
     [Header("Animation Settings - Gun")]
     public float gunRecoilDistance = 0.2f;
@@ -59,6 +63,7 @@ public class WeaponDisplay : MonoBehaviour
         {
             originalLocalPosition = weaponHolder.localPosition;
         }
+        currentAmmo = maxAmmo;
     }
 
     void Update()
