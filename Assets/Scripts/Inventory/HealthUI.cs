@@ -36,24 +36,24 @@ public class HealthUI : MonoBehaviour
     {
         if (healthText != null)
         {
-            // Mostrar solo el número actual (sin "/100")
+            // Mostrar solo el nï¿½mero actual (sin "/100")
             healthText.text = currentHealth.ToString();
 
-            // Cambiar color según porcentaje de vida
+            // Cambiar color segï¿½n porcentaje de vida
             float healthPercentage = (float)currentHealth / maxHealth;
 
             if (healthPercentage == 1.0f) // Vida al 100%
             {
                 healthText.color = fullHealthColor; // Verde cactus
             }
-            else if (healthPercentage > 0.5f) // Más del 50%
+            else if (healthPercentage > 0.5f) // Mï¿½s del 50%
             {
-                // Transición suave de verde a amarillo
+                // Transiciï¿½n suave de verde a amarillo
                 healthText.color = Color.Lerp(midHealthColor, fullHealthColor, (healthPercentage - 0.5f) * 2f);
             }
             else if (healthPercentage > 0.25f) // Entre 25% y 50%
             {
-                // Transición suave de amarillo a rojo
+                // Transiciï¿½n suave de amarillo a rojo
                 healthText.color = Color.Lerp(lowHealthColor, midHealthColor, (healthPercentage - 0.25f) * 4f);
             }
             else // Menos del 25%

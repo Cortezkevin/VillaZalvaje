@@ -8,6 +8,9 @@ public class WeaponDisplay : MonoBehaviour
     public SpriteRenderer weaponRenderer;
     public Transform weaponHolder;
 
+    public ItemData selectedItem;
+
+
     [Header("Weapon Sprites")]
     public Sprite knifeSprite;
     public Sprite gunSprite;
@@ -95,7 +98,7 @@ public class WeaponDisplay : MonoBehaviour
             return;
         }
 
-        ItemData selectedItem = InventoryManager.Instance?.GetSelectedItem();
+        selectedItem = InventoryManager.Instance?.GetSelectedItem();
 
         if (selectedItem == null)
         {
