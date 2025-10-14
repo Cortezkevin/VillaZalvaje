@@ -12,6 +12,9 @@ public class ItemPickup : MonoBehaviour
     private Transform player;
     private bool canPickup = false;
 
+    [Header("Visual Indicator")]
+    public GameObject pickupIndicator;
+
     void Start()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -22,7 +25,12 @@ public class ItemPickup : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No se encontró ningún objeto con tag 'Player'!");
+            Debug.LogError("No se encontro ningun objeto con tag 'Player'!");
+        }
+
+        if (pickupIndicator != null)
+        {
+            pickupIndicator.SetActive(false);
         }
     }
 
@@ -35,17 +43,30 @@ public class ItemPickup : MonoBehaviour
         }
 
         float distance = Vector3.Distance(transform.position, player.position);
-        canPickup = distance <= pickupRange;
+
+        // Verifica si la condiciÃ³n de recogida ha cambiado
+        bool newCanPickup = distance <= pickupRange;
+
+        if (newCanPickup != canPickup)
+        {
+            canPickup = newCanPickup;
+
+            // LÃ³gica para mostrar/ocultar el indicador
+            if (pickupIndicator != null)
+            {
+                pickupIndicator.SetActive(canPickup);
+            }
+        }
 
         if (canPickup)
         {
             Debug.Log("Dentro del rango! Distancia: " + distance + " - Presiona G");
-        }
 
-        if (canPickup && Keyboard.current.gKey.wasPressedThisFrame)
-        {
-            Debug.Log("Tecla G presionada!");
-            PickupItem();
+            if (Keyboard.current.gKey.wasPressedThisFrame)
+            {
+                Debug.Log("Tecla G presionada!");
+                PickupItem();
+            }
         }
     }
 
@@ -63,6 +84,12 @@ public class ItemPickup : MonoBehaviour
         {
             if (InventoryManager.Instance.AddItem(itemData))
             {
+                // Ocultar el indicador inmediatamente antes de destruir el objeto
+                if (pickupIndicator != null)
+                {
+                    pickupIndicator.SetActive(false);
+                }
+
                 Debug.Log("Item recogido exitosamente: " + itemData.itemName);
                 Destroy(gameObject);
             }
@@ -73,7 +100,7 @@ public class ItemPickup : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No se encontró InventoryManager!");
+            Debug.LogError("No se encontro InventoryManager!");
         }
     }
 
