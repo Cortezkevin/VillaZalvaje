@@ -9,23 +9,25 @@ public class AmmoDisplay : MonoBehaviour
 
     void Update()
     {
-        if (weaponDisplay.selectedItem.itemName.ToString() == "Gun")
+        if (weaponDisplay.selectedItem != null)
         {
-            if (weaponDisplay == null || ammoText == null) return;
+            if (weaponDisplay.selectedItem.itemName.ToString() == "Gun")
+            {
+                if (weaponDisplay == null || ammoText == null) return;
 
-            // Si no quedan balas, mostrar mensaje
-            if (weaponDisplay.currentAmmo <= 0)
-            {
-                ammoText.text = "Press R";
-                ammoText.color = Color.red;
-            }
-            else
-            {
-                // Mostrar balas restantes
-                ammoText.text = $"{weaponDisplay.currentAmmo} / {weaponDisplay.maxAmmo}";
-                ammoText.color = Color.white;
+                // Si no quedan balas, mostrar mensaje
+                if (weaponDisplay.currentAmmo <= 0)
+                {
+                    ammoText.text = "Press R";
+                    ammoText.color = Color.red;
+                }
+                else
+                {
+                    // Mostrar balas restantes
+                    ammoText.text = $"{weaponDisplay.currentAmmo} / {weaponDisplay.maxAmmo}";
+                    ammoText.color = Color.white;
+                }
             }
         }
-        
     }
 }
