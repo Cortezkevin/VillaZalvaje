@@ -23,10 +23,10 @@ public class PlayerStats : MonoBehaviour
     void Awake()
     {
         // Singleton pattern
-        if (Instance == null)
+        if (PlayerStats.Instance == null)
         {
-            Instance = this;
-            //DontDestroyOnLoad(gameObject); // Opcional: mantener entre escenas
+            PlayerStats.Instance = this;
+            DontDestroyOnLoad(this.gameObject); // Opcional: mantener entre escenas
         }
         else
         {
