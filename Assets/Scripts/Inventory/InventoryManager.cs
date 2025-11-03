@@ -20,9 +20,10 @@ public class InventoryManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
+        if (InventoryManager.Instance == null)
         {
-            Instance = this;
+            InventoryManager.Instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -35,6 +36,7 @@ public class InventoryManager : MonoBehaviour
         UpdateUI();
         UpdateSelection();
     }
+
 
     void Update()
     {
