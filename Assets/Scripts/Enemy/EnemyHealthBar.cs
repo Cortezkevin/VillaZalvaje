@@ -13,7 +13,7 @@ public class EnemyHealthBar : MonoBehaviour
 
     [Header("Settings")]
     public Vector3 offset = new Vector3(0f, 1.5f, 0f); // Offset sobre el enemigo
-    public bool hideWhenFull = false; // Ocultar barra cuando vida está al 100%
+    public bool hideWhenFull = false; // Ocultar barra cuando vida estï¿½ al 100%
     public bool hideWhenDead = true;  // Ocultar barra cuando muere
 
     private EnemyStats enemyStats;
@@ -32,14 +32,14 @@ public class EnemyHealthBar : MonoBehaviour
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
 
-        // Buscar automáticamente la barra si no está asignada
+        // Buscar automï¿½ticamente la barra si no estï¿½ asignada
         if (healthBarFill == null)
         {
             Transform healthBarTransform = transform.Find("HealthBar");
             if (healthBarTransform != null)
             {
                 healthBarFill = healthBarTransform.GetComponent<Image>();
-                Debug.Log("HealthBar encontrada automáticamente en " + gameObject.name);
+                Debug.Log("HealthBar encontrada automï¿½ticamente en " + gameObject.name);
             }
         }
     }
@@ -73,7 +73,7 @@ public class EnemyHealthBar : MonoBehaviour
         {
             transform.position = enemyTransform.position + offset;
 
-            // Hacer que la barra siempre mire a la cámara
+            // Hacer que la barra siempre mire a la cï¿½mara
             if (Camera.main != null)
             {
                 transform.rotation = Camera.main.transform.rotation;
@@ -95,14 +95,14 @@ public class EnemyHealthBar : MonoBehaviour
     {
         if (healthBarFill == null)
         {
-            Debug.LogWarning("healthBarFill no está asignado en " + gameObject.name);
+            Debug.LogWarning("healthBarFill no estï¿½ asignado en " + gameObject.name);
             return;
         }
 
         float healthPercentage = (float)currentHealth / maxHealth;
         healthBarFill.fillAmount = healthPercentage;
 
-        // Cambiar color según porcentaje
+        // Cambiar color segï¿½n porcentaje
         if (healthPercentage > 0.5f)
         {
             healthBarFill.color = Color.Lerp(midHealthColor, highHealthColor, (healthPercentage - 0.5f) * 2f);
@@ -116,7 +116,7 @@ public class EnemyHealthBar : MonoBehaviour
             healthBarFill.color = lowHealthColor;
         }
 
-        // Ocultar/mostrar según configuración
+        // Ocultar/mostrar segï¿½n configuraciï¿½n
         if (hideWhenFull && healthPercentage >= 1.0f)
         {
             SetVisible(false);

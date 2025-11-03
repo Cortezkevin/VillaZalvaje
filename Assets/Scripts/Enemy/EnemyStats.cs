@@ -26,7 +26,7 @@ public class EnemyStats : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        Debug.Log(gameObject.name + " recibió " + damage + " de daño. Vida: " + currentHealth + "/" + maxHealth);
+        Debug.Log(gameObject.name + " recibiï¿½ " + damage + " de daï¿½o. Vida: " + currentHealth + "/" + maxHealth);
 
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
 
@@ -48,7 +48,8 @@ public class EnemyStats : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log(gameObject.name + " murió!");
+        Debug.Log(gameObject.name + " murio!");
+        PlayerStats.Instance.AddScore(10); // Otorga 10 puntos al jugador al morir el enemigo
         OnEnemyDeath?.Invoke();
 
         if (destroyOnDeath)
@@ -57,7 +58,7 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
-    // Getters públicos
+    // Getters pï¿½blicos
     public int GetCurrentHealth()
     {
         return currentHealth;

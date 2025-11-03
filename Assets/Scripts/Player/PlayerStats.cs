@@ -15,8 +15,9 @@ public class PlayerStats : MonoBehaviour
     public int currentAmmo = 30;
     public int score = 0;
 
-    // Eventos para notificar cambios (opcional pero útil)
+    // Eventos para notificar cambios (opcional pero ï¿½til)
     public event Action<int, int> OnHealthChanged; // (currentHealth, maxHealth)
+    public event Action<int> OnScoreChanged;
     public event Action OnPlayerDeath;
 
     void Awake()
@@ -35,18 +36,18 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        // Inicializar vida al máximo
+        // Inicializar vida al mï¿½ximo
         currentHealth = maxHealth;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
-    // Método para recibir daño
+    // Mï¿½todo para recibir daï¿½o
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        Debug.Log("Player recibió " + damage + " de daño. Vida: " + currentHealth + "/" + maxHealth);
+        Debug.Log("Player recibiï¿½ " + damage + " de daï¿½o. Vida: " + currentHealth + "/" + maxHealth);
 
         // Flash rojo (opcional)
         StartCoroutine(DamageFlash());
@@ -70,7 +71,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    // Método para curar
+    // Mï¿½todo para curar
     public void Heal(int amount)
     {
         currentHealth += amount;
@@ -81,7 +82,7 @@ public class PlayerStats : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
-    // Método para establecer vida al máximo
+    // Mï¿½todo para establecer vida al mï¿½ximo
     public void ResetHealth()
     {
         currentHealth = maxHealth;
@@ -90,17 +91,17 @@ public class PlayerStats : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("¡Player murió!");
+        Debug.Log("ï¿½Player muriï¿½!");
         OnPlayerDeath?.Invoke();
 
-        // Aquí puedes agregar lógica de muerte:
+        // Aquï¿½ puedes agregar lï¿½gica de muerte:
         // - Mostrar pantalla de Game Over
         // - Reiniciar nivel
         // - Desactivar controles
         // etc.
     }
 
-    // Getters públicos
+    // Getters pï¿½blicos
     public int GetCurrentHealth()
     {
         return currentHealth;
@@ -116,10 +117,11 @@ public class PlayerStats : MonoBehaviour
         return (float)currentHealth / maxHealth;
     }
 
-    // Método para agregar puntos
+    // Mï¿½todo para agregar puntos
     public void AddScore(int points)
     {
         score += points;
         Debug.Log("Score: " + score);
+        OnScoreChanged?.Invoke(score);
     }
 }

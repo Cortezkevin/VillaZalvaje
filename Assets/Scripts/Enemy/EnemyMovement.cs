@@ -11,10 +11,10 @@ public class EnemyMovement : MonoBehaviour
 
     [Header("Combat Settings")]
     [SerializeField]
-    private int damageAmount = 10; // Daño que hace al jugador
+    private int damageAmount = 10; // Daï¿½o que hace al jugador
 
     [SerializeField]
-    private float damageInterval = 1f; // Cada cuánto puede hacer daño (en segundos)
+    private float damageInterval = 1f; // Cada cuï¿½nto puede hacer daï¿½o (en segundos)
 
     private float lastDamageTime = 0f;
 
@@ -71,7 +71,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    // Detectar colisión con el jugador
+    // Detectar colisiï¿½n con el jugador
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -80,7 +80,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    // Mantener daño mientras está tocando al jugador
+    // Mantener daï¿½o mientras estï¿½ tocando al jugador
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -98,7 +98,7 @@ public class EnemyMovement : MonoBehaviour
         {
             PlayerStats.Instance.TakeDamage(damageAmount);
             lastDamageTime = Time.time;
-            Debug.Log("Zombie hizo " + damageAmount + " de daño al jugador!");
+            Debug.Log("Zombie hizo " + damageAmount + " de daï¿½o al jugador!");
         }
     }
 }
