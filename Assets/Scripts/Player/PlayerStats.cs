@@ -91,14 +91,20 @@ public class PlayerStats : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("�Player muri�!");
+        Debug.Log("Jugador murió");
         OnPlayerDeath?.Invoke();
 
-        // Aqu� puedes agregar l�gica de muerte:
-        // - Mostrar pantalla de Game Over
-        // - Reiniciar nivel
-        // - Desactivar controles
-        // etc.
+        // Desactivar movimiento y armas
+        PlayerMovement movement = GetComponent<PlayerMovement>();
+        if (movement != null)
+            movement.enabled = false;
+
+        WeaponDisplay weapon = GetComponentInChildren<WeaponDisplay>();
+        if (weapon != null)
+            weapon.enabled = false;
+
+        // Mostrar pantalla de Game Over
+        UIManager.Instance?.ShowGameOverPanel();
     }
 
     // Getters p�blicos
