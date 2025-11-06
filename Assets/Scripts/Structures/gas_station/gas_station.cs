@@ -16,6 +16,11 @@ public class gas_station : MonoBehaviour
     public Collider2D normalCollider;
     public Collider2D deadCollider;
 
+    public float explosionRadius = 3f;
+    public int maxDamage = 80;   // daño más cercano
+    public int midDamage = 50;   // daño intermedio
+    public int minDamage = 20;   // daño lejano
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -56,11 +61,44 @@ public class gas_station : MonoBehaviour
     {
 
         animator.SetTrigger("dead");
+
+        Explode();
+
         if (normalCollider != null) normalCollider.enabled = false;
         if (deadCollider != null) deadCollider.enabled = true;
 
         yield break;
 
+    }
+    private void Explode()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+
+        foreach (Collider2D hit in hits)
+        {
+            if (hit.CompareTag("Player") || hit.CompareTag("enemy"))
+            {
+                float distance = Vector2.Distance(transform.position, hit.transform.position);
+                int damageToApply = 0;
+
+                if (distance <= explosionRadius * 0.33f)
+                    damageToApply = maxDamage;      // cerca
+                else if (distance <= explosionRadius * 0.66f)
+                    damageToApply = midDamage;      // medio
+                else
+                    damageToApply = minDamage;      // lejos
+
+                // Asume que cada objetivo tiene un método TakeDamage(int)
+                hit.SendMessage("TakeDamage", damageToApply, SendMessageOptions.DontRequireReceiver);
+            }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        // Dibuja el radio de daño en el editor
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
