@@ -1,0 +1,502 @@
+fileFormatVersion: 2
+guid: 2d5a94a3b273c754d9f939abd777683e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7029168260738892658
+    second: gas_estacion_explosion_0
+  - first:
+      213: -4042909907257218247
+    second: gas_estacion_explosion_1
+  - first:
+      213: 5218274567523755746
+    second: gas_estacion_explosion_2
+  - first:
+      213: -9163881561466174845
+    second: gas_estacion_explosion_3
+  - first:
+      213: 5574830879206638447
+    second: gas_estacion_explosion_4
+  - first:
+      213: 2943726772631996047
+    second: gas_estacion_explosion_5
+  - first:
+      213: -9158494852201356219
+    second: gas_estacion_explosion_6
+  - first:
+      213: -4902434106143295804
+    second: gas_estacion_explosion_7
+  - first:
+      213: 4308910012351456536
+    second: gas_estacion_explosion_8
+  - first:
+      213: 8606130422221529699
+    second: gas_estacion_explosion_9
+  - first:
+      213: 8118534950543822813
+    second: gas_estacion_explosion_10
+  - first:
+      213: 1327760373020949881
+    second: gas_estacion_explosion_11
+  - first:
+      213: 7560688215066189342
+    second: gas_estacion_explosion_12
+  - first:
+      213: -8475750903858972101
+    second: gas_estacion_explosion_13
+  - first:
+      213: 7424677364500208008
+    second: gas_estacion_explosion_14
+  - first:
+      213: 4025291471006174177
+    second: gas_estacion_explosion_15
+  - first:
+      213: 1810209567839761117
+    second: gas_estacion_explosion_16
+  - first:
+      213: 7327998207508497316
+    second: gas_estacion_explosion_17
+  - first:
+      213: -8082496197443092731
+    second: gas_estacion_explosion_18
+  - first:
+      213: -1702128635055808599
+    second: gas_estacion_explosion_19
+  - first:
+      213: -5345606774364461763
+    second: gas_estacion_explosion_20
+  - first:
+      213: -3298480086151762589
+    second: gas_estacion_explosion_21
+  - first:
+      213: -3644001952129587506
+    second: gas_estacion_explosion_22
+  - first:
+      213: 8553625137073772270
+    second: gas_estacion_explosion_23
+  - first:
+      213: 5434593239523771322
+    second: gas_estacion_explosion_24
+  - first:
+      213: 4869189425190554906
+    second: gas_estacion_explosion_25
+  - first:
+      213: 1618033823769745627
+    second: gas_estacion_explosion_26
+  - first:
+      213: 2225157459111523475
+    second: gas_estacion_explosion_27
+  - first:
+      213: -2221454968820182124
+    second: gas_estacion_explosion_28
+  - first:
+      213: 4387509363381584786
+    second: gas_estacion_explosion_29
+  - first:
+      213: -1821123357038785592
+    second: gas_estacion_explosion_30
+  - first:
+      213: 9186380074294839843
+    second: gas_estacion_explosion_31
+  - first:
+      213: -7465261432109799891
+    second: gas_estacion_explosion_32
+  - first:
+      213: 3160509497630061149
+    second: gas_estacion_explosion_33
+  - first:
+      213: -7034203101335841168
+    second: gas_estacion_explosion_34
+  - first:
+      213: 6144744138339879241
+    second: gas_estacion_explosion_35
+  - first:
+      213: -2549747441745689086
+    second: gas_estacion_explosion_36
+  - first:
+      213: 7175660705042197709
+    second: gas_estacion_explosion_37
+  - first:
+      213: -8301583911068921950
+    second: gas_estacion_explosion_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gas_estacion_explosion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273cacf7a4f9c8160800000000000000
+      internalID: 7029168260738892658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas_estacion_explosion_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ba60f0cd2b4e7c0800000000000000
+      internalID: -4042909907257218247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas_estacion_explosion_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e665b152190b6840800000000000000
+      internalID: 5218274567523755746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas_estacion_explosion_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3828e0da54a53d080800000000000000
+      internalID: -9163881561466174845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas_estacion_explosion_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f638dfdd527cd5d40800000000000000
+      internalID: 5574830879206638447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas_estacion_explosion_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86898637e73ad820800000000000000
+      internalID: 2943726772631996047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas_estacion_explosion_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5446b49a47d76e080800000000000000
+      internalID: -9158494852201356219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas_estacion_explosion_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c6b198972e07fbb0800000000000000
+      internalID: -4902434106143295804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas_estacion_explosion_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815255f93d25ccb30800000000000000
+      internalID: 4308910012351456536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas_estacion_explosion_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3626233950e1f6770800000000000000
+      internalID: 8606130422221529699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas_estacion_explosion_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf02cf0684daa070800000000000000
+      internalID: 8118534950543822813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0b63c73e65733dc469d1f329f49ec818
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      gas_estacion_explosion_0: 7029168260738892658
+      gas_estacion_explosion_1: -4042909907257218247
+      gas_estacion_explosion_10: 8118534950543822813
+      gas_estacion_explosion_2: 5218274567523755746
+      gas_estacion_explosion_3: -9163881561466174845
+      gas_estacion_explosion_4: 5574830879206638447
+      gas_estacion_explosion_5: 2943726772631996047
+      gas_estacion_explosion_6: -9158494852201356219
+      gas_estacion_explosion_7: -4902434106143295804
+      gas_estacion_explosion_8: 4308910012351456536
+      gas_estacion_explosion_9: 8606130422221529699
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
