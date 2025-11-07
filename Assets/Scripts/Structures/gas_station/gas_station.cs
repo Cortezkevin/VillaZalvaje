@@ -64,6 +64,13 @@ public class gas_station : MonoBehaviour
 
         Explode();
 
+        CameraShakeController shake = FindAnyObjectByType<CameraShakeController>();
+        if (shake != null)
+        {
+            shake.Shake(2f, 5f, 0.3f);
+        }
+
+
         if (normalCollider != null) normalCollider.enabled = false;
         if (deadCollider != null) deadCollider.enabled = true;
 
