@@ -23,7 +23,7 @@ public class InventoryManager : MonoBehaviour
         if (InventoryManager.Instance == null)
         {
             InventoryManager.Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+
         }
         else
         {
@@ -45,6 +45,15 @@ public class InventoryManager : MonoBehaviour
             SwitchSlot();
         }
     }
+
+    public void ClearInventory()
+    {
+        inventory.Clear();
+        selectedSlot = -1;
+        UpdateUI();
+        UpdateSelection();
+    }
+
 
     public bool AddItem(ItemData item)
     {

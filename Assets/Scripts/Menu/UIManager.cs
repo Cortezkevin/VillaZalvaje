@@ -13,7 +13,6 @@ public class UIManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -36,13 +35,11 @@ public class UIManager : MonoBehaviour
 
     public void RetryLevel()
     {
-        Time.timeScale = 1f; // Reanuda el tiempo
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.Instance.RetryLevel();
     }
 
     public void GoToMainMenu()
     {
-        Time.timeScale = 1f; // Reanuda el tiempo
-        SceneManager.LoadScene("Menu"); 
+        GameManager.Instance.GoToMainMenu();
     }
 }

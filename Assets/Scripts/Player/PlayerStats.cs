@@ -26,7 +26,6 @@ public class PlayerStats : MonoBehaviour
         if (PlayerStats.Instance == null)
         {
             PlayerStats.Instance = this;
-            DontDestroyOnLoad(this.gameObject); // Opcional: mantener entre escenas
         }
         else
         {

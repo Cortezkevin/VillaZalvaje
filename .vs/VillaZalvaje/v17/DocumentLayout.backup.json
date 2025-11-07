@@ -3,60 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|c:\\users\\usuario\\desktop\\dj_proyect\\villazalvaje\\assets\\scripts\\camara\\camerashake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camara\\camerashake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\menu\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|c:\\users\\usuario\\desktop\\dj_proyect\\villazalvaje\\assets\\scripts\\structures\\gas_station\\gas_station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\structures\\gas_station\\gas_station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\enemy\\enemystats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemystats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\inventory\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\enemy\\enemyhealthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemyhealthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\player\\playerstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|c:\\users\\usuario\\desktop\\dj_proyect\\villazalvaje\\assets\\scripts\\menu\\persistentcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\persistentcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\inventory\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\menu\\menusystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\menusystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\menu\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\player\\playerstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\player\\weapondisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\weapondisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\player\\cinemachinetargetsetter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\cinemachinetargetsetter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\inventory\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\enemy\\enemyhealthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemyhealthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\inventory\\scoreui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\scoreui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\menu\\menusystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\menusystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\player\\cinemachinetargetsetter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\cinemachinetargetsetter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\assets\\scripts\\inventory\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3A3CCB-0A6B-DFBF-3758-4DFFCF0CB3F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,121 +54,101 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CameraShake.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Camara\\CameraShake.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Camara\\CameraShake.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Camara\\CameraShake.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Camara\\CameraShake.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwUAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T05:47:19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "gas_station.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Structures\\gas_station\\gas_station.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Structures\\gas_station\\gas_station.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Structures\\gas_station\\gas_station.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Structures\\gas_station\\gas_station.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAowEUAAAAJAAAAAAAAAA==",
+              "Title": "PersistentCanvas.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Menu\\PersistentCanvas.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\PersistentCanvas.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Menu\\PersistentCanvas.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu\\PersistentCanvas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T05:21:55.6Z",
+              "WhenOpened": "2025-11-07T20:12:30.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Bullet.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Inventory\\Bullet.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Bullet.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Inventory\\Bullet.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inventory\\Bullet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T05:14:35.313Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EnemyStats.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Enemy\\EnemyStats.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyStats.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Enemy\\EnemyStats.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyStats.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T18:55:02.387Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "EnemyHealthBar.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Enemy\\EnemyHealthBar.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyHealthBar.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Enemy\\EnemyHealthBar.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyHealthBar.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T05:13:32.967Z"
+              "WhenOpened": "2025-11-06T05:13:32.967Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UIManager.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Menu\\UIManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\UIManager.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Menu\\UIManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Menu\\UIManager.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAYwCYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T21:09:45.869Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MenuSystem.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Menu\\MenuSystem.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\MenuSystem.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Menu\\MenuSystem.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Menu\\MenuSystem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T21:09:32.512Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "InventoryManager.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Inventory\\InventoryManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\InventoryManager.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Inventory\\InventoryManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Inventory\\InventoryManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAgwCUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T20:25:32.233Z"
+              "WhenOpened": "2025-11-03T20:25:32.233Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "PlayerStats.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\PlayerStats.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerStats.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\PlayerStats.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerStats.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAowGkAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwGsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T18:53:20.527Z"
+              "WhenOpened": "2025-11-03T18:53:20.527Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
+              "Title": "ScoreUI.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Inventory\\ScoreUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\ScoreUI.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Inventory\\ScoreUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inventory\\ScoreUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T18:58:42.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeaponDisplay.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\WeaponDisplay.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\WeaponDisplay.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\WeaponDisplay.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\WeaponDisplay.cs",
+              "ViewState": "AgIAAK4BAAAAAAAAAAAcwIEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T15:57:17.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Menu\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\UIManager.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Menu\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu\\UIManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T21:09:45.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "CinemachineTargetSetter.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\CinemachineTargetSetter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\CinemachineTargetSetter.cs",
@@ -192,31 +160,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ScoreUI.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Inventory\\ScoreUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\ScoreUI.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Inventory\\ScoreUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inventory\\ScoreUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T18:58:42.569Z"
+              "WhenOpened": "2025-10-10T16:58:06.251Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WeaponDisplay.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\WeaponDisplay.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\WeaponDisplay.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\WeaponDisplay.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\WeaponDisplay.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAowGQAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "MenuSystem.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Menu\\MenuSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\MenuSystem.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Menu\\MenuSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu\\MenuSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T15:57:17.981Z"
+              "WhenOpened": "2025-11-03T21:09:32.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "ItemPickup.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Inventory\\ItemPickup.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\ItemPickup.cs",
@@ -225,18 +194,6 @@
               "ViewState": "AgIAACoAAAAAAAAAAAAqwEQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-14T15:13:52.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\dj_proyect\\VillaZalvaje\\Assets\\Scripts\\Player\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:58:06.251Z"
             }
           ]
         }
