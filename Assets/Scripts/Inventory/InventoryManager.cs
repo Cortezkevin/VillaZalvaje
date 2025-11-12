@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -23,6 +25,7 @@ public class InventoryManager : MonoBehaviour
         if (InventoryManager.Instance == null)
         {
             InventoryManager.Instance = this;
+            DontDestroyOnLoad(gameObject);  
 
         }
         else
@@ -45,6 +48,7 @@ public class InventoryManager : MonoBehaviour
             SwitchSlot();
         }
     }
+
 
     public void ClearInventory()
     {
@@ -181,6 +185,44 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Buscar nuevamente los slots e indicador de selección en la nueva escena
+        if (itemSlots == null || itemSlots.Length == 0)
+        {
+            itemSlots = GameObject.FindObjectsByType<Image>(FindObjectsSortMode.None)
+                .Where(img => img.CompareTag("InventorySlot"))
+                .ToArray();
+        }
+
+        if (selectionIndicator == null)
+        {
+            GameObject indicatorObj = GameObject.FindWithTag("SelectionIndicator");
+            if (indicatorObj != null)
+                selectionIndicator = indicatorObj;
+        }
+
+        // Actualizar UI para reflejar los ítems persistentes
+        UpdateUI();
+        UpdateSelection();
+
+        AmmoDisplay ammoUI = Object.FindAnyObjectByType<AmmoDisplay>();
+        if (ammoUI != null)
+        {
+            ammoUI.UpdateAmmoUI();
+        }
+    }
+
     public ItemData GetSelectedItem()
     {
         if (selectedSlot >= 0 && selectedSlot < inventory.Count)
@@ -194,4 +236,6 @@ public class InventoryManager : MonoBehaviour
     {
         return selectedSlot;
     }
+
+
 }

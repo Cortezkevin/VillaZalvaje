@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -7,12 +8,15 @@ public class UIManager : MonoBehaviour
 
     [Header("Game Over UI")]
     public GameObject gameOverPanel;
+    public Button retryButton;
+    public Button goToMainMenu;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -25,11 +29,19 @@ public class UIManager : MonoBehaviour
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(true);
-            Time.timeScale = 0f; // Pausa el juego
+            Time.timeScale = 0f;
         }
         else
         {
             Debug.LogWarning("GameOverPanel no asignado en UIManager");
+        }
+    }
+
+    public void HideGameOverPanel()
+    {
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(false);
         }
     }
 

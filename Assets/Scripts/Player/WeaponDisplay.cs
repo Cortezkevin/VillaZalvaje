@@ -10,6 +10,7 @@ public class WeaponDisplay : MonoBehaviour
 
     public ItemData selectedItem;
 
+    private AmmoDisplay ammoDisplay;
 
     [Header("Weapon Sprites")]
     public Sprite knifeSprite;
@@ -63,11 +64,13 @@ public class WeaponDisplay : MonoBehaviour
     void Start()
     {
         if (weaponHolder != null)
-        {
             originalLocalPosition = weaponHolder.localPosition;
-        }
+
         currentAmmo = maxAmmo;
+        ammoDisplay = FindAnyObjectByType<AmmoDisplay>();
+        ammoDisplay?.UpdateAmmoUI(); // Muestra balas al inicio
     }
+
 
     void Update()
     {
@@ -130,6 +133,7 @@ public class WeaponDisplay : MonoBehaviour
                 weaponRenderer.sprite = selectedItem.itemIcon;
                 break;
         }
+        ammoDisplay?.UpdateAmmoUI();
     }
 
     private void RotateWeaponTowardsMouse()
@@ -202,7 +206,8 @@ public class WeaponDisplay : MonoBehaviour
                 {
                     StartCoroutine(GunRecoilAnimation());
                     FireBullet();
-                    currentAmmo--; 
+                    currentAmmo--;
+                    ammoDisplay?.UpdateAmmoUI();
                     Debug.Log("Balas restantes: " + currentAmmo);
                     lastFireTime = Time.time;
                 }
@@ -270,6 +275,7 @@ public class WeaponDisplay : MonoBehaviour
         yield return new WaitForSeconds(reloadTime);
 
         currentAmmo = maxAmmo;
+        ammoDisplay?.UpdateAmmoUI();
         isReloading = false;
         Debug.Log("Recarga completa");
     }

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public UIManager uiManager;
     public PlayerStats playerStats;
     public InventoryManager inventoryManager;
+    public Animator transitionAnim;
 
     private bool isGameOver = false;
 
@@ -32,30 +33,42 @@ public class GameManager : MonoBehaviour
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+{
+    InitializeReferences();
+
+    // Reubicar jugador si existe SpawnPoint
+    Transform spawnPoint = GameObject.FindWithTag("SpawnPoint")?.transform;
+    if (spawnPoint != null && playerStats != null)
     {
-        // Reasignar referencias al cargar una nueva escena
-        InitializeReferences();
-
-        if (playerStats != null && playerStats.GetCurrentHealth() <= 0)
-        {
-            // Evitar revivir muerto sin reiniciar
-            playerStats.ResetHealth();
-        }
-
-        Time.timeScale = 1f;
-        isGameOver = false;
+        playerStats.transform.position = spawnPoint.position;
     }
+
+    // Ocultar panel Game Over
+    UIManager.Instance?.HideGameOverPanel();
+
+    // **Nuevo: reproducir animación "Start" al cargar el nuevo nivel**
+    Animator transitionAnim = Object.FindFirstObjectByType<Animator>(FindObjectsInactive.Include);
+    if (transitionAnim != null && transitionAnim.runtimeAnimatorController != null)
+    {
+        if (transitionAnim.HasParameter("Start"))
+        {
+            transitionAnim.ResetTrigger("End");
+            transitionAnim.SetTrigger("Start");
+        }
+    }
+
+    Time.timeScale = 1f;
+    isGameOver = false;
+}
+
+
 
     private void InitializeReferences()
     {
-        if (uiManager == null)
-            uiManager = FindFirstObjectByType<UIManager>();
-
-        if (playerStats == null)
-            playerStats = FindFirstObjectByType<PlayerStats>();
-
-        if (inventoryManager == null)
-            inventoryManager = FindFirstObjectByType<InventoryManager>();
+        // Referencias preferibles via singleton para evitar problemas de reasignación
+        if (uiManager == null) uiManager = UIManager.Instance;
+        if (playerStats == null) playerStats = PlayerStats.Instance;
+        if (inventoryManager == null) inventoryManager = InventoryManager.Instance;
 
         // Suscribirse a eventos del jugador
         if (playerStats != null)
@@ -71,29 +84,54 @@ public class GameManager : MonoBehaviour
 
         isGameOver = true;
         Time.timeScale = 0f;
-
-        if (uiManager != null)
-        {
-            uiManager.ShowGameOverPanel();
-        }
+        UIManager.Instance?.ShowGameOverPanel();
     }
 
+    // -------- Cambiar aquí: RetryLevel --------
     public void RetryLevel()
     {
-        if (playerStats != null)
-            playerStats.ResetHealth();
+        // Ocultar panel de Game Over
+        UIManager.Instance?.HideGameOverPanel();
 
-        if (inventoryManager != null)
-            inventoryManager.ClearInventory();
+        // Resetear stats del jugador
+        PlayerStats.Instance?.ResetAllStats();
 
-        isGameOver = false;
+        // Reanudar tiempo
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        // Recargar la escena actual
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentIndex);
+
+        // Limpiar inventario DESPUÉS de recargar la escena
+        SceneManager.sceneLoaded += (scene, mode) =>
+        {
+            if (InventoryManager.Instance != null)
+            {
+                InventoryManager.Instance.ClearInventory();
+            }
+        };
     }
+
 
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
+    }
+
+    // (Opcional) método para avanzar al siguiente nivel por build index
+    public void LoadNextLevel()
+    {
+        int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextIndex);
+            transitionAnim.SetTrigger("Start");
+        }
+        else
+        {
+            Debug.Log("No hay más niveles en Build Settings.");
+        }
     }
 }

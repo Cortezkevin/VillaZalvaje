@@ -6899,6 +6899,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_13
@@ -6957,7 +6965,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7441,6 +7453,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_14
@@ -7499,7 +7519,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7627,6 +7651,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (7)
@@ -7685,7 +7717,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8033,6 +8069,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (14)
@@ -8091,7 +8135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10083,6 +10131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_07
@@ -10141,7 +10197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10161,6 +10217,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (2)
@@ -10219,7 +10283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34739,6 +34803,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_11
@@ -34797,7 +34869,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35209,6 +35285,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (10)
@@ -35267,7 +35351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35438,6 +35526,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_09
@@ -35496,7 +35592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35961,7 +36057,7 @@ GameObject:
   - component: {fileID: 853976362}
   m_Layer: 5
   m_Name: Slot_0
-  m_TagString: Untagged
+  m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40887,7 +40983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiManager: {fileID: 1468574532}
   playerStats: {fileID: 8218641806078566245}
-  inventoryManager: {fileID: 2080118086}
+  inventoryManager: {fileID: 2089289146}
+  transitionAnim: {fileID: 393960854}
 --- !u!4 &898181902
 Transform:
   m_ObjectHideFlags: 0
@@ -41260,6 +41357,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (5)
@@ -41318,7 +41423,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41338,6 +41447,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_02
@@ -41396,7 +41513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43752,6 +43869,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_12
@@ -43810,7 +43935,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43830,6 +43959,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (6)
@@ -43888,7 +44025,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43908,6 +44049,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_08
@@ -43966,7 +44115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43991,7 +44140,7 @@ GameObject:
   - component: {fileID: 1161771272}
   m_Layer: 5
   m_Name: Slot_1
-  m_TagString: Untagged
+  m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44302,6 +44451,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (11)
@@ -44360,7 +44517,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44380,6 +44541,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (12)
@@ -44438,7 +44607,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44647,6 +44820,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (1)
@@ -44705,7 +44886,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44756,6 +44941,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_00
@@ -44814,7 +45007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45033,6 +45230,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (9)
@@ -45091,7 +45296,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45133,6 +45342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1143442492}
+  retryButton: {fileID: 1193369929}
+  goToMainMenu: {fileID: 0}
 --- !u!4 &1468574533
 Transform:
   m_ObjectHideFlags: 0
@@ -45608,6 +45819,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_10
@@ -45666,7 +45885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46339,6 +46558,37 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &1637152790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1637152791}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: SpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1637152791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637152790}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -90.87, y: 32.07, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647668115
 GameObject:
   m_ObjectHideFlags: 0
@@ -46498,6 +46748,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_01
@@ -46556,7 +46814,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46576,6 +46838,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (4)
@@ -46634,7 +46904,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46796,6 +47070,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_06
@@ -46854,7 +47136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47298,6 +47580,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_04
@@ -47356,7 +47646,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47515,6 +47809,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_03
@@ -47573,7 +47875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47721,6 +48023,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (3)
@@ -47779,7 +48089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47804,7 +48114,7 @@ GameObject:
   - component: {fileID: 1895205102}
   m_Layer: 0
   m_Name: EndPoint
-  m_TagString: Untagged
+  m_TagString: EndPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47822,6 +48132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 393960854}
+  transitionDelay: 1
 --- !u!61 &1895205103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47948,6 +48259,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05
@@ -48006,7 +48325,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -48168,6 +48491,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (13)
@@ -48226,7 +48557,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -48246,6 +48581,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_04 (1)
@@ -48304,7 +48647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -57412,6 +57755,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809391407}
     m_Modifications:
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy_05 (8)
@@ -57470,7 +57821,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555250970732037223, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -57493,10 +57848,9 @@ GameObject:
   - component: {fileID: 2080118083}
   - component: {fileID: 2080118085}
   - component: {fileID: 2080118084}
-  - component: {fileID: 2080118086}
   m_Layer: 5
   m_Name: InventoryUI
-  m_TagString: Untagged
+  m_TagString: SelectionIndicator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57564,23 +57918,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080118082}
   m_CullTransparentMesh: 1
---- !u!114 &2080118086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080118082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27083f370caa4094894a059394b945c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemSlots:
-  - {fileID: 853976362}
-  - {fileID: 1161771272}
-  emptySlotSprite: {fileID: 7774172018246517046, guid: 7bbb6ef9a117034459aac08e363d3dfa, type: 3}
-  selectionIndicator: {fileID: 1587153111}
 --- !u!1 &2089289141
 GameObject:
   m_ObjectHideFlags: 0
@@ -57593,6 +57930,7 @@ GameObject:
   - component: {fileID: 2089289144}
   - component: {fileID: 2089289143}
   - component: {fileID: 2089289142}
+  - component: {fileID: 2089289146}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -57685,6 +58023,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2089289146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089289141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27083f370caa4094894a059394b945c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSlots:
+  - {fileID: 853976362}
+  - {fileID: 1161771272}
+  emptySlotSprite: {fileID: 7774172018246517046, guid: 7bbb6ef9a117034459aac08e363d3dfa, type: 3}
+  selectionIndicator: {fileID: 1587153111}
 --- !u!1 &2116197422
 GameObject:
   m_ObjectHideFlags: 0
@@ -58112,3 +58467,4 @@ SceneRoots:
   - {fileID: 1895205104}
   - {fileID: 1468574533}
   - {fileID: 898181902}
+  - {fileID: 1637152791}

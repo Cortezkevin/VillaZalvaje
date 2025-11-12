@@ -15,17 +15,17 @@ public class PlayerStats : MonoBehaviour
     public int currentAmmo = 30;
     public int score = 0;
 
-    // Eventos para notificar cambios (opcional pero �til)
-    public event Action<int, int> OnHealthChanged; // (currentHealth, maxHealth)
+    // Eventos
+    public event Action<int, int> OnHealthChanged;
     public event Action<int> OnScoreChanged;
     public event Action OnPlayerDeath;
 
     void Awake()
     {
-        // Singleton pattern
-        if (PlayerStats.Instance == null)
+        if (Instance == null)
         {
-            PlayerStats.Instance = this;
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -35,20 +35,17 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        // Inicializar vida al m�ximo
         currentHealth = maxHealth;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
-    // M�todo para recibir da�o
+    // -------- VIDA --------
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        Debug.Log("Player recibi� " + damage + " de da�o. Vida: " + currentHealth + "/" + maxHealth);
-
-        // Flash rojo (opcional)
+        Debug.Log($"Player recibió {damage} de daño. Vida: {currentHealth}/{maxHealth}");
         StartCoroutine(DamageFlash());
 
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
@@ -70,21 +67,12 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    // M�todo para curar
     public void Heal(int amount)
     {
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        Debug.Log("Player curado " + amount + " puntos. Vida: " + currentHealth + "/" + maxHealth);
-
-        OnHealthChanged?.Invoke(currentHealth, maxHealth);
-    }
-
-    // M�todo para establecer vida al m�ximo
-    public void ResetHealth()
-    {
-        currentHealth = maxHealth;
+        Debug.Log($"Player curado {amount} puntos. Vida: {currentHealth}/{maxHealth}");
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
@@ -94,39 +82,50 @@ public class PlayerStats : MonoBehaviour
         OnPlayerDeath?.Invoke();
 
         // Desactivar movimiento y armas
-        PlayerMovement movement = GetComponent<PlayerMovement>();
-        if (movement != null)
+        if (TryGetComponent(out PlayerMovement movement))
             movement.enabled = false;
 
         WeaponDisplay weapon = GetComponentInChildren<WeaponDisplay>();
         if (weapon != null)
             weapon.enabled = false;
 
-        // Mostrar pantalla de Game Over
+        // Mostrar panel de Game Over
         UIManager.Instance?.ShowGameOverPanel();
     }
 
-    // Getters p�blicos
-    public int GetCurrentHealth()
-    {
-        return currentHealth;
-    }
+    // -------- GETTERS --------
+    public int GetCurrentHealth() => currentHealth;
+    public int GetMaxHealth() => maxHealth;
+    public float GetHealthPercentage() => (float)currentHealth / maxHealth;
 
-    public int GetMaxHealth()
-    {
-        return maxHealth;
-    }
-
-    public float GetHealthPercentage()
-    {
-        return (float)currentHealth / maxHealth;
-    }
-
-    // M�todo para agregar puntos
+    // -------- SCORE --------
     public void AddScore(int points)
     {
         score += points;
-        Debug.Log("Score: " + score);
+        Debug.Log($"Score: {score}");
         OnScoreChanged?.Invoke(score);
+    }
+
+    // -------- REINICIO TOTAL --------
+    public void ResetAllStats()
+    {
+        currentHealth = maxHealth;
+        score = 0;
+        currentAmmo = maxAmmo;
+
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        OnScoreChanged?.Invoke(score);
+
+        if (TryGetComponent(out PlayerMovement movement))
+            movement.enabled = true;
+
+        WeaponDisplay weapon = GetComponentInChildren<WeaponDisplay>();
+        if (weapon != null)
+            weapon.enabled = true;
+
+        // Reposicionar en el punto de respawn
+        Transform spawnPoint = GameObject.FindWithTag("SpawnPoint")?.transform;
+        if (spawnPoint != null)
+            transform.position = spawnPoint.position;
     }
 }

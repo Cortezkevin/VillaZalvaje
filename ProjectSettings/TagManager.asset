@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - enemy
+  - SpawnPoint
+  - InventorySlot
+  - SelectionIndicator
+  - EndPoint
   layers:
   - Default
   - TransparentFX
