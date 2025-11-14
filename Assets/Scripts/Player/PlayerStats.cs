@@ -35,8 +35,13 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth;
+        // --- NUEVO: Cargar el estado guardado de GameData al inicio de cualquier escena ---
+        currentHealth = GameData.SavedHealth;
+        score = GameData.SavedScore;
+        currentAmmo = GameData.SavedAmmo; // Asumiendo que PlayerStats maneja la munición
+
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        OnScoreChanged?.Invoke(score);
     }
 
     // -------- VIDA --------
@@ -109,9 +114,10 @@ public class PlayerStats : MonoBehaviour
     // -------- REINICIO TOTAL --------
     public void ResetAllStats()
     {
-        currentHealth = maxHealth;
-        score = 0;
-        currentAmmo = maxAmmo;
+        // --- MODIFICADO: Reiniciar usando los datos guardados (desde el nivel anterior) ---
+        currentHealth = GameData.SavedHealth;
+        score = GameData.SavedScore;
+        currentAmmo = GameData.SavedAmmo;
 
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnScoreChanged?.Invoke(score);

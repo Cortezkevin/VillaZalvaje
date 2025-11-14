@@ -87,14 +87,22 @@ public class GameManager : MonoBehaviour
         UIManager.Instance?.ShowGameOverPanel();
     }
 
-    // -------- Cambiar aquí: RetryLevel --------
+    // -------- Modificación clave: RetryLevel --------
     public void RetryLevel()
     {
         // Ocultar panel de Game Over
         UIManager.Instance?.HideGameOverPanel();
 
-        // Resetear stats del jugador
+        // Resetear stats del jugador.
+        // ESTO CARGARÁ EL ESTADO GUARDADO EN GAMEDATA (incluyendo score y vida).
         PlayerStats.Instance?.ResetAllStats();
+
+        // *** ELIMINAR CUALQUIER LLAMADA A InventoryManager.Instance.ClearInventory() AQUÍ ***
+        // La recarga de inventario se hará en Start() del InventoryManager 
+        // al cargar la escena, usando GameData.SavedInventory.
+
+        // Solo necesitamos asegurarnos de que la UI se actualice después de la recarga
+        // aunque OnSceneLoaded ya debería encargarse de esto.
 
         // Reanudar tiempo
         Time.timeScale = 1f;
@@ -103,26 +111,43 @@ public class GameManager : MonoBehaviour
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentIndex);
 
-        // Limpiar inventario DESPUÉS de recargar la escena
+        // *** ELIMINAR EL LISTENER SceneManager.sceneLoaded += ... QUE LIMPIABA INVENTARIO ***
+        // Si tenías este código:
+        /*
         SceneManager.sceneLoaded += (scene, mode) =>
         {
-            if (InventoryManager.Instance != null)
-            {
-                InventoryManager.Instance.ClearInventory();
-            }
+             if (InventoryManager.Instance != null)
+             {
+                 InventoryManager.Instance.ClearInventory(); // ¡ELIMINAR ESTO!
+             }
         };
+        */
     }
 
 
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
+
+        // --- NUEVO: 2. Resetear los datos de persistencia al ir al menú principal. ---
+        GameData.ResetToDefaults();
+
+        // NOTA: El inventario actual debe limpiarse antes de cargar la escena del menú,
+        // o el menú mostrará los ítems anteriores.
+        InventoryManager.Instance?.ClearInventory();
+
         SceneManager.LoadScene("Menu");
     }
 
     // (Opcional) método para avanzar al siguiente nivel por build index
     public void LoadNextLevel()
     {
+        if (PlayerStats.Instance != null && InventoryManager.Instance != null)
+        {
+            // Se llama al método para guardar el estado del jugador
+            GameData.StoreCurrentPlayerData(PlayerStats.Instance, InventoryManager.Instance);
+        }
+
         int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
         {

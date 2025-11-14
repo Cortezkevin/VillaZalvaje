@@ -36,6 +36,21 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
+        // 1. Limpiamos la instancia persistente del inventario.
+        inventory.Clear();
+
+        // 2. Cargamos el inventario guardado en GameData.
+        if (GameData.SavedInventory != null)
+        {
+            // 3. Agregamos los ítems guardados uno por uno.
+            // Usamos AddItem() para que maneje correctamente la inicialización de selectedSlot.
+            foreach (var item in GameData.SavedInventory)
+            {
+                // Nota: Aquí estamos asumiendo que SavedInventory contiene los objetos ItemData
+                AddItem(item);
+            }
+        }
+
         UpdateUI();
         UpdateSelection();
     }
@@ -230,6 +245,12 @@ public class InventoryManager : MonoBehaviour
             return inventory[selectedSlot];
         }
         return null;
+    }
+
+    // Dentro de InventoryManager.cs
+    public System.Collections.Generic.List<ItemData> GetInventory()
+    {
+        return inventory;
     }
 
     public int GetSelectedSlot()
