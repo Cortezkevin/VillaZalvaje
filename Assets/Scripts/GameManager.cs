@@ -93,16 +93,12 @@ public class GameManager : MonoBehaviour
         // Ocultar panel de Game Over
         UIManager.Instance?.HideGameOverPanel();
 
-        // Resetear stats del jugador.
-        // ESTO CARGARÁ EL ESTADO GUARDADO EN GAMEDATA (incluyendo score y vida).
+        // Resetear stats del jugador (Carga LevelStartHealth/Score/Ammo).
         PlayerStats.Instance?.ResetAllStats();
 
-        // *** ELIMINAR CUALQUIER LLAMADA A InventoryManager.Instance.ClearInventory() AQUÍ ***
-        // La recarga de inventario se hará en Start() del InventoryManager 
-        // al cargar la escena, usando GameData.SavedInventory.
-
-        // Solo necesitamos asegurarnos de que la UI se actualice después de la recarga
-        // aunque OnSceneLoaded ya debería encargarse de esto.
+        // --- NUEVO: Forzar la carga del inventario de LevelStartData ---
+        // Esto limpia el inventario actual y lo carga con LevelStartInventory.
+        InventoryManager.Instance?.LoadLevelStartInventory();
 
         // Reanudar tiempo
         Time.timeScale = 1f;
@@ -111,17 +107,8 @@ public class GameManager : MonoBehaviour
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentIndex);
 
-        // *** ELIMINAR EL LISTENER SceneManager.sceneLoaded += ... QUE LIMPIABA INVENTARIO ***
-        // Si tenías este código:
-        /*
-        SceneManager.sceneLoaded += (scene, mode) =>
-        {
-             if (InventoryManager.Instance != null)
-             {
-                 InventoryManager.Instance.ClearInventory(); // ¡ELIMINAR ESTO!
-             }
-        };
-        */
+        // NOTA: El InventoryManager.Start() o OnSceneLoaded ahora solo tienen que
+        // actualizar la UI, ya que el estado (inventory) ya está correcto.
     }
 
 
@@ -144,14 +131,20 @@ public class GameManager : MonoBehaviour
     {
         if (PlayerStats.Instance != null && InventoryManager.Instance != null)
         {
-            // Se llama al método para guardar el estado del jugador
-            GameData.StoreCurrentPlayerData(PlayerStats.Instance, InventoryManager.Instance);
+            // **CORRECCIÓN:** Usar el método correcto para guardar el estado del jugador 
+            // para el siguiente nivel.
+            GameData.StoreLevelStartData(PlayerStats.Instance, InventoryManager.Instance);
         }
 
         int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextIndex);
+
+            // Cuidado: Si Time.timeScale se puso a 0 en LoadNextLevel, 
+            // la animación no correrá hasta que se reanude.
+            // Si usas animación, debes usar un IEnumerator y WaitForSecondsRealtime.
+            // Asumiendo que la transición está configurada para funcionar:
             transitionAnim.SetTrigger("Start");
         }
         else

@@ -33,13 +33,17 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    // PlayerStats.cs
+
     void Start()
     {
-        // --- NUEVO: Cargar el estado guardado de GameData al inicio de cualquier escena ---
-        currentHealth = GameData.SavedHealth;
-        score = GameData.SavedScore;
-        currentAmmo = GameData.SavedAmmo; // Asumiendo que PlayerStats maneja la munición
+        // --- CORRECCIÓN: Cargar el estado de LevelStartData al inicio de cualquier escena ---
+        // Esto asegura que el jugador inicie el nivel con los stats que tenía al entrar (o por defecto en Nivel 1).
+        currentHealth = GameData.LevelStartHealth;
+        score = GameData.LevelStartScore;
+        currentAmmo = GameData.LevelStartAmmo;
 
+        // Inicializar el evento de UI con los valores cargados.
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnScoreChanged?.Invoke(score);
     }
@@ -114,10 +118,10 @@ public class PlayerStats : MonoBehaviour
     // -------- REINICIO TOTAL --------
     public void ResetAllStats()
     {
-        // --- MODIFICADO: Reiniciar usando los datos guardados (desde el nivel anterior) ---
-        currentHealth = GameData.SavedHealth;
-        score = GameData.SavedScore;
-        currentAmmo = GameData.SavedAmmo;
+        // --- CORRECCIÓN: Reiniciar usando los datos de LevelStartData ---
+        currentHealth = GameData.LevelStartHealth;
+        score = GameData.LevelStartScore;
+        currentAmmo = GameData.LevelStartAmmo;
 
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnScoreChanged?.Invoke(score);
@@ -133,5 +137,8 @@ public class PlayerStats : MonoBehaviour
         Transform spawnPoint = GameObject.FindWithTag("SpawnPoint")?.transform;
         if (spawnPoint != null)
             transform.position = spawnPoint.position;
+
+        // Nota: El inventario se reinicia por la llamada a InventoryManager.LoadLevelStartInventory() 
+        // dentro de GameManager.RetryLevel() (o Start() del InventoryManager al recargar la escena).
     }
 }

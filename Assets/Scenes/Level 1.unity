@@ -45343,7 +45343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1143442492}
   retryButton: {fileID: 1193369929}
-  goToMainMenu: {fileID: 0}
+  goToMainMenu: {fileID: 1087901515}
 --- !u!4 &1468574533
 Transform:
   m_ObjectHideFlags: 0

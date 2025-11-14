@@ -34,25 +34,11 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    // InventoryManager.cs
+
     void Start()
     {
-        // 1. Limpiamos la instancia persistente del inventario.
-        inventory.Clear();
-
-        // 2. Cargamos el inventario guardado en GameData.
-        if (GameData.SavedInventory != null)
-        {
-            // 3. Agregamos los ítems guardados uno por uno.
-            // Usamos AddItem() para que maneje correctamente la inicialización de selectedSlot.
-            foreach (var item in GameData.SavedInventory)
-            {
-                // Nota: Aquí estamos asumiendo que SavedInventory contiene los objetos ItemData
-                AddItem(item);
-            }
-        }
-
-        UpdateUI();
-        UpdateSelection();
+        LoadLevelStartInventory(); // Llama al método que hace todo el trabajo.
     }
 
 
@@ -258,5 +244,27 @@ public class InventoryManager : MonoBehaviour
         return selectedSlot;
     }
 
+    public void LoadLevelStartInventory()
+    {
+        // 1. Limpiamos la lista actual persistente (DontDestroyOnLoad).
+        inventory.Clear();
+        selectedSlot = -1; // Aseguramos que la selección se reinicie.
+
+        // 2. Cargamos el inventario con el que se debe empezar este nivel.
+        if (GameData.LevelStartInventory != null)
+        {
+            foreach (var item in GameData.LevelStartInventory)
+            {
+                // Usamos AddItem para actualizar la lista interna y la selección.
+                AddItem(item);
+            }
+        }
+
+        // 3. Forzamos la actualización visual.
+        UpdateUI();
+        UpdateSelection();
+
+        Debug.Log("Inventario restablecido al estado de inicio de nivel. Items: " + inventory.Count);
+    }
 
 }
