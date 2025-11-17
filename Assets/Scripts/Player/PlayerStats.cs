@@ -35,6 +35,7 @@ public class PlayerStats : MonoBehaviour
 
     // PlayerStats.cs
 
+
     void Start()
     {
         // --- CORRECCIÓN: Cargar el estado de LevelStartData al inicio de cualquier escena ---
