@@ -12,19 +12,29 @@ public class gas_station : MonoBehaviour
     [Header("Animaciones")]
     public Animator animator;
 
+    [Header("Audio")] // NUEVO: Configuración de Audio
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip explosionClip;
+
     [Header("Colliders")]
     public Collider2D normalCollider;
     public Collider2D deadCollider;
 
     public float explosionRadius = 3f;
-    public int maxDamage = 80;   // daño más cercano
-    public int midDamage = 50;   // daño intermedio
-    public int minDamage = 20;   // daño lejano
+    public int maxDamage = 80;    // daño más cercano
+    public int midDamage = 50;    // daño intermedio
+    public int minDamage = 20;    // daño lejano
 
     void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
+
+        // NUEVO: Intentar obtener el AudioSource si no está asignado
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
 
         if (normalCollider != null) normalCollider.enabled = true;
         if (deadCollider != null) deadCollider.enabled = false;
@@ -52,13 +62,15 @@ public class gas_station : MonoBehaviour
         else
         {
             isDead = true;
-            
+
             StartCoroutine(HandleDeath());
         }
     }
 
     private IEnumerator HandleDeath()
     {
+        // 1. Reproducir audio de explosión
+        PlayExplosionSound(); // NUEVO
 
         animator.SetTrigger("dead");
 
@@ -77,6 +89,21 @@ public class gas_station : MonoBehaviour
         yield break;
 
     }
+
+    // NUEVO MÉTODO PARA REPRODUCIR EL SONIDO
+    private void PlayExplosionSound()
+    {
+        if (audioSource != null && explosionClip != null)
+        {
+            // Reproduce el clip de una sola vez
+            audioSource.PlayOneShot(explosionClip);
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource o ExplosionClip no asignado en la estación de gas.");
+        }
+    }
+
     private void Explode()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, explosionRadius);

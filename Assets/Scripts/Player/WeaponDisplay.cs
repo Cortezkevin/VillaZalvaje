@@ -19,6 +19,13 @@ public class WeaponDisplay : MonoBehaviour
     public Sprite shotgunSprite;
     public Sprite cokeSprite;
 
+    // --- NUEVO: Configuración de Audio ---
+    [Header("Audio Settings")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip gunShotClip;
+    [SerializeField] private AudioClip knifeSlashClip;
+    // ------------------------------------
+
     [Header("Rotation Settings")]
     public bool enableRotation = true;
     public float rotationOffset = 0f;
@@ -40,12 +47,12 @@ public class WeaponDisplay : MonoBehaviour
 
     [Header("Gun Settings")]
     public GameObject bulletPrefab;
-    public Transform firePoint; 
+    public Transform firePoint;
     public float fireRate = 0.3f;
     private float lastFireTime;
-    public int maxAmmo = 7;           
-    public int currentAmmo;           
-    public float reloadTime = 1.5f;   
+    public int maxAmmo = 7;
+    public int currentAmmo;
+    public float reloadTime = 1.5f;
     private bool isReloading = false;
 
     [Header("Animation Settings - Gun")]
@@ -69,6 +76,12 @@ public class WeaponDisplay : MonoBehaviour
         currentAmmo = maxAmmo;
         ammoDisplay = FindAnyObjectByType<AmmoDisplay>();
         ammoDisplay?.UpdateAmmoUI(); // Muestra balas al inicio
+
+        // NUEVO: Obtener AudioSource si no está asignado
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
 
@@ -205,7 +218,7 @@ public class WeaponDisplay : MonoBehaviour
                 if (Time.time - lastFireTime >= fireRate)
                 {
                     StartCoroutine(GunRecoilAnimation());
-                    FireBullet();
+                    FireBullet(); // Se llama a FireBullet, donde se reproduce el audio
                     currentAmmo--;
                     ammoDisplay?.UpdateAmmoUI();
                     Debug.Log("Balas restantes: " + currentAmmo);
@@ -213,7 +226,9 @@ public class WeaponDisplay : MonoBehaviour
                 }
                 break;
             case "Shotgun":
+                // Podrías añadir lógica de munición y FireBullet para Shotgun aquí
                 StartCoroutine(GunRecoilAnimation());
+                FireBullet(); // Asumiendo que usa FireBullet o similar
                 break;
             case "Grenade":
                 StartCoroutine(ThrowAnimation());
@@ -235,6 +250,17 @@ public class WeaponDisplay : MonoBehaviour
             return;
         }
 
+        // --- NUEVO: Reproducir sonido de disparo ---
+        if (audioSource != null && gunShotClip != null)
+        {
+            audioSource.PlayOneShot(gunShotClip);
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource o GunShotClip no asignado para disparo.");
+        }
+        // ------------------------------------------
+
         // --- Calcular posición del mouse en world (robusto y siempre correcto) ---
         Vector3 mousePos = Mouse.current.position.ReadValue();
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -251,6 +277,7 @@ public class WeaponDisplay : MonoBehaviour
         bullet.transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
         // Enviar dirección al script de la bala (si existe)
+        // [CÓDIGO DE BALA EXISTENTE]
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         if (bulletScript != null)
         {
@@ -271,7 +298,7 @@ public class WeaponDisplay : MonoBehaviour
         isReloading = true;
         Debug.Log("Recargando...");
 
-        // (Opcional) Aquí podrías reproducir una animación o sonido
+        // (Opcional) Aquí podrías reproducir sonido de recarga
         yield return new WaitForSeconds(reloadTime);
 
         currentAmmo = maxAmmo;
@@ -280,12 +307,23 @@ public class WeaponDisplay : MonoBehaviour
         Debug.Log("Recarga completa");
     }
 
-
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, knifeRange);
+    }
 
     // ANIMACIÓN: Cortar con cuchillo (ACTUALIZADA CON DAÑO)
     private IEnumerator KnifeSlashAnimation()
     {
         isAnimating = true;
+
+        // --- NUEVO: Reproducir sonido de cuchillo al inicio del slash ---
+        if (audioSource != null && knifeSlashClip != null)
+        {
+            audioSource.PlayOneShot(knifeSlashClip);
+        }
+        // -----------------------------------------------------------------
 
         float startAngle = currentMouseAngle + rotationOffset;
         float slashDirection = isFacingLeft ? 1f : -1f;
@@ -459,10 +497,4 @@ public class WeaponDisplay : MonoBehaviour
         }
     }
 
-    // ⚔️ NUEVO: Visualizar rango de ataque en el Editor
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, knifeRange);
-    }
 }

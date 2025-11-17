@@ -11,6 +11,12 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] private bool destroyOnDeath = true;
     [SerializeField] private float destroyDelay = 0.1f;
 
+    // --- NUEVO: Audio de Daño ---
+    [Header("Audio Settings")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip hitClip;
+    // ----------------------------
+
     // Eventos para notificar cambios de vida
     public event Action<int, int> OnHealthChanged; // (currentHealth, maxHealth)
     public event Action OnEnemyDeath;
@@ -19,6 +25,12 @@ public class EnemyStats : MonoBehaviour
     {
         currentHealth = maxHealth;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
+
+        // Obtener AudioSource si no está asignado
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     public void TakeDamage(int damage)
@@ -26,7 +38,10 @@ public class EnemyStats : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        Debug.Log(gameObject.name + " recibi� " + damage + " de da�o. Vida: " + currentHealth + "/" + maxHealth);
+        // NUEVO: Reproducir sonido de daño al recibir impacto
+        PlayHitSound();
+
+        Debug.Log(gameObject.name + " recibió " + damage + " de daño. Vida: " + currentHealth + "/" + maxHealth);
 
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
 
@@ -34,6 +49,17 @@ public class EnemyStats : MonoBehaviour
         {
             Die();
         }
+    }
+
+    // --- NUEVO MÉTODO PARA REPRODUCIR SONIDO DE DAÑO ---
+    private void PlayHitSound()
+    {
+        if (audioSource != null && hitClip != null)
+        {
+            // Usamos PlayOneShot para que el audio de daño no interrumpa el audio de pasos
+            audioSource.PlayOneShot(hitClip);
+        }
+        // No mostramos Warning aquí, ya que el AudioSource puede estar en EnemyMovement.
     }
 
     public void Heal(int amount)
@@ -52,13 +78,15 @@ public class EnemyStats : MonoBehaviour
         PlayerStats.Instance.AddScore(10); // Otorga 10 puntos al jugador al morir el enemigo
         OnEnemyDeath?.Invoke();
 
+        // Puedes añadir una reproducción de sonido de muerte aquí si quieres
+
         if (destroyOnDeath)
         {
             Destroy(gameObject, destroyDelay);
         }
     }
 
-    // Getters p�blicos
+    // Getters públicos
     public int GetCurrentHealth()
     {
         return currentHealth;

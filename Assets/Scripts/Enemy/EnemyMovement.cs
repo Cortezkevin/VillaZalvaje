@@ -11,12 +11,20 @@ public class EnemyMovement : MonoBehaviour
 
     [Header("Combat Settings")]
     [SerializeField]
-    private int damageAmount = 10; // Da�o que hace al jugador
+    private int damageAmount = 10; // Daño que hace al jugador
 
     [SerializeField]
-    private float damageInterval = 1f; // Cada cu�nto puede hacer da�o (en segundos)
+    private float damageInterval = 1f; // Cada cuánto puede hacer daño (en segundos)
 
     private float lastDamageTime = 0f;
+
+    // --- Audio de Pasos ---
+    [Header("Audio Settings")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip footstepClip;
+    [SerializeField] private float stepInterval = 0.8f; // Intervalo de tiempo entre sonidos de pasos
+    private float stepTimer = 0f;
+    // ----------------------
 
     private Rigidbody2D rigidbody;
     private PlayerAwernessController playerAwernessController;
@@ -26,12 +34,25 @@ public class EnemyMovement : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         playerAwernessController = GetComponent<PlayerAwernessController>();
+
+        // Obtener AudioSource si no está asignado
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     private void FixedUpdate()
     {
         UpdateTargetDirection();
         SetVelocity();
+        // RotateTowardsTarget(); 
+    }
+
+    private void Update()
+    {
+        // Llamamos al manejo de audio en Update para usar Time.deltaTime
+        HandleFootsteps();
     }
 
     private void UpdateTargetDirection()
@@ -62,16 +83,40 @@ public class EnemyMovement : MonoBehaviour
     {
         if (targetDireccion == Vector2.zero)
         {
+            // Frena suavemente
             rigidbody.linearVelocity = Vector2.Lerp(rigidbody.linearVelocity, Vector2.zero, 0.1f);
         }
         else
         {
+            // Acelera hacia el objetivo
             Vector2 desiredVelocity = targetDireccion.normalized * speed;
             rigidbody.linearVelocity = Vector2.Lerp(rigidbody.linearVelocity, desiredVelocity, 0.1f);
         }
     }
 
-    // Detectar colisi�n con el jugador
+    private void HandleFootsteps()
+    {
+        // El enemigo se mueve si tiene un objetivo (targetDireccion no es cero)
+        bool isMoving = targetDireccion.sqrMagnitude > 0;
+
+        if (isMoving && audioSource != null && footstepClip != null)
+        {
+            stepTimer -= Time.deltaTime;
+
+            if (stepTimer <= 0)
+            {
+                // Reproducir sonido de paso
+                audioSource.PlayOneShot(footstepClip);
+                stepTimer = stepInterval;
+            }
+        }
+        else
+        {
+            // Resetear el temporizador si no estamos moviéndonos
+            stepTimer = 0;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -80,7 +125,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    // Mantener da�o mientras est� tocando al jugador
+    // Mantener daño mientras esté tocando al jugador
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -97,8 +142,8 @@ public class EnemyMovement : MonoBehaviour
         if (PlayerStats.Instance != null)
         {
             PlayerStats.Instance.TakeDamage(damageAmount);
-            lastDamageTime = Time.time;
-            Debug.Log("Zombie hizo " + damageAmount + " de da�o al jugador!");
+            lastDamageTime = Time.time; 
+            Debug.Log("Zombie hizo " + damageAmount + " de daño al jugador!");
         }
     }
 }
