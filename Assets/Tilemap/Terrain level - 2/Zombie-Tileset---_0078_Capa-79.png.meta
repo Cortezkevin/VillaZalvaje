@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 08760a12ac8366443a3a17784ffa73a2
+guid: ee1fd24e7af32cc48a18fc494102f68f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2850633027637422752
-    second: Zombie-Tileset---_0077_Capa-78_0
+      213: 2621257775803237152
+    second: Zombie-Tileset---_0078_Capa-79_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zombie-Tileset---_0077_Capa-78_0
+      name: Zombie-Tileset---_0078_Capa-79_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 065dcaa5d548078d0800000000000000
-      internalID: -2850633027637422752
+      spriteID: 0238b7f1f04906420800000000000000
+      internalID: 2621257775803237152
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Zombie-Tileset---_0077_Capa-78_0: -2850633027637422752
+      Zombie-Tileset---_0078_Capa-79_0: 2621257775803237152
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
