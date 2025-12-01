@@ -16,6 +16,9 @@ public class InventoryManager : MonoBehaviour
     [Header("Selection Indicator")]
     public GameObject selectionIndicator;
 
+    [Header("Item Dropping")]
+    public GameObject itemWorldPrefab;
+
     private List<ItemData> inventory = new List<ItemData>();
     private int maxSlots = 2;
     private int selectedSlot = -1;
@@ -59,15 +62,102 @@ public class InventoryManager : MonoBehaviour
         UpdateSelection();
     }
 
+    // InventoryManager.cs
+
+    // ... (El resto del script)
+
+    // 🟢 MÉTODO AJUSTADO: Suelta un ítem en el mundo
+    public void DropItem(ItemData itemToDrop)
+    {
+        if (itemToDrop == null) return;
+
+        GameObject player = GameObject.FindWithTag("Player");
+        // ... (Chequeos y determinación de dropPosition existentes)
+
+        if (itemWorldPrefab == null)
+        {
+            Debug.LogError("itemWorldPrefab NO ESTÁ ASIGNADO...");
+            return;
+        }
+
+        // ... (Determinación de dropPosition)
+        Vector3 dropDirection = Vector3.right;
+        SpriteRenderer playerSprite = player.GetComponent<SpriteRenderer>();
+
+        if (playerSprite != null && playerSprite.flipX)
+        {
+            dropDirection = Vector3.left;
+        }
+
+        Vector3 dropPosition = player.transform.position + dropDirection * 0.5f;
+
+        GameObject droppedItem = Instantiate(itemWorldPrefab, dropPosition, Quaternion.identity);
+
+        ItemPickup itemPickupScript = droppedItem.GetComponent<ItemPickup>();
+
+        if (itemPickupScript != null)
+        {
+            // 1. Asignamos el ItemData al prefab recién creado.
+            itemPickupScript.itemData = itemToDrop;
+
+            // 2. BUSCAMOS Y ASIGNAMOS EL SPRITE DEL WEAPONDISPLAY
+            SpriteRenderer droppedSprite = droppedItem.GetComponent<SpriteRenderer>();
+
+            if (droppedSprite != null)
+            {
+                // 🚀 NUEVA LÓGICA: Obtener el sprite desde WeaponDisplay
+                if (WeaponDisplay.Instance != null)
+                {
+                    droppedSprite.sprite = WeaponDisplay.Instance.GetItemSprite(itemToDrop);
+                }
+                else
+                {
+                    // Si WeaponDisplay no existe, usamos el ícono por defecto del ItemData
+                    droppedSprite.sprite = itemToDrop.itemIcon;
+                    Debug.LogWarning("WeaponDisplay.Instance no encontrado. Usando ItemData.itemIcon por defecto.");
+                }
+
+                droppedItem.name = "Dropped_" + itemToDrop.itemName;
+            }
+            // ... (Resto del log)
+        }
+        else
+        {
+            Debug.LogError($"El itemWorldPrefab no tiene el componente ItemPickup...");
+        }
+    }
 
     public bool AddItem(ItemData item)
     {
+        // ⚠️ LÓGICA DE REEMPLAZO ⚠️
         if (inventory.Count >= maxSlots)
         {
-            Debug.Log("Inventario lleno! (2/2 slots ocupados)");
-            return false;
-        }
+            Debug.Log("Inventario lleno! Activando lógica de reemplazo.");
 
+            // 1. Obtener el ítem actual en el slot seleccionado
+            if (selectedSlot < 0 || selectedSlot >= inventory.Count)
+            {
+                Debug.LogError("Selected slot inválido durante AddItem con inventario lleno.");
+                return false;
+            }
+
+            ItemData itemToReplace = inventory[selectedSlot];
+
+            // 2. Soltar el ítem viejo al suelo
+            DropItem(itemToReplace);
+
+            // 3. Reemplazar el ítem en el slot seleccionado
+            inventory[selectedSlot] = item;
+
+            Debug.Log($"Ítem {itemToReplace.itemName} reemplazado por {item.itemName} en Slot {selectedSlot}.");
+
+            UpdateUI();
+            UpdateSelection();
+            return true; // Ítem añadido por reemplazo
+        }
+        // FIN LÓGICA DE REEMPLAZO
+
+        // Lógica de añadir normal si el inventario NO está lleno
         inventory.Add(item);
 
         if (inventory.Count == 1)
@@ -94,7 +184,8 @@ public class InventoryManager : MonoBehaviour
             }
             else if (selectedSlot == slotIndex && inventory.Count > 0)
             {
-                selectedSlot = 0;
+                // Asegurar que selectedSlot siempre es un índice válido después de la eliminación
+                selectedSlot = Mathf.Clamp(selectedSlot, 0, inventory.Count - 1);
             }
 
             UpdateUI();

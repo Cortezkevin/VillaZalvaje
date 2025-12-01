@@ -4,6 +4,8 @@ using System.Collections;
 
 public class WeaponDisplay : MonoBehaviour
 {
+    public static WeaponDisplay Instance;
+
     [Header("Weapon Holder")]
     public SpriteRenderer weaponRenderer;
     public Transform weaponHolder;
@@ -95,6 +97,20 @@ public class WeaponDisplay : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        // 🟢 NUEVO: Implementación del Singleton
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
 
     void Update()
     {
@@ -159,6 +175,32 @@ public class WeaponDisplay : MonoBehaviour
         else
         {
             Debug.Log("La vida está al máximo. No se necesita curación.");
+        }
+    }
+
+    public Sprite GetItemSprite(ItemData itemData)
+    {
+        if (itemData == null) return null;
+
+        switch (itemData.itemName)
+        {
+            case "Knife":
+                return knifeSprite;
+            case "Gun":
+                return gunSprite;
+            case "Grenade":
+                return grenadeSprite;
+            case "Shotgun":
+                return shotgunSprite;
+            case "Coke":
+                return cokeSprite;
+            case "Firstkit":
+                return firstkitSprite;
+            case "Medicine":
+                return medicineSprite;
+            default:
+                // Si el nombre no coincide con ninguna variable serializada, usa el ícono del ItemData.
+                return itemData.itemIcon;
         }
     }
 
