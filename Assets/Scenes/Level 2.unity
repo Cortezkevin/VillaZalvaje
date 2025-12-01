@@ -2217,6 +2217,12 @@ MonoBehaviour:
   maxAmmo: 7
   currentAmmo: 0
   reloadTime: 1.5
+  maxShotgunAmmo: 4
+  currentShotgunAmmo: 0
+  pelletsPerShot: 4
+  shotgunFireRate: 1.2
+  shotgunPelletDamage: 8
+  shotgunSpreadAngle: 15
   gunRecoilDistance: 0.2
   gunRecoilSpeed: 20
   throwDistance: 1
@@ -16402,6 +16408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy2
       objectReference: {fileID: 0}
+    - target: {fileID: 149220373185665837, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: damageInterval
       value: 5
@@ -17816,7 +17826,7 @@ GameObject:
   - component: {fileID: 1218899408}
   - component: {fileID: 1218899407}
   m_Layer: 0
-  m_Name: gun
+  m_Name: shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17850,7 +17860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a33c4e6835894f34cbe6f5faadf0cb3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 0d7e30b7869eab34a9fd9625448a70f9, type: 2}
+  itemData: {fileID: 11400000, guid: a1cff16691fd6cb4eafe604154ea848e, type: 2}
   pickupRange: 0.5
   pickupIndicator: {fileID: 1240242205}
 --- !u!61 &1218899408
@@ -17891,7 +17901,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.3125}
+    oldSize: {x: 1, y: 0.3125}
     newSize: {x: 1, y: 0.3125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -17943,7 +17953,7 @@ SpriteRenderer:
   m_SortingLayerID: 690913719
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9b91e2611a672947a5e7cccd5978118, type: 3}
+  m_Sprite: {fileID: 21300000, guid: edaee56eb8b7dbe40a3e833f940138fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

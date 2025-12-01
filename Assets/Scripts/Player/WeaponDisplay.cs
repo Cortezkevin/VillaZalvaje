@@ -61,6 +61,15 @@ public class WeaponDisplay : MonoBehaviour
     public float reloadTime = 1.5f;
     private bool isReloading = false;
 
+    [Header("Shotgun Settings")]
+    public int maxShotgunAmmo = 4;        // Máximo de disparos (cartuchos) por cargador
+    public int currentShotgunAmmo;
+    public int pelletsPerShot = 4;        // Número de "perdigones" por cartucho
+    public float shotgunFireRate = 1.2f;  // Cadencia más lenta
+    public float shotgunPelletDamage = 8; // Menos daño individual por perdigón
+    public float shotgunSpreadAngle = 15f;// Ángulo de dispersión para los perdigones
+    private float lastShotgunFireTime;
+
     [Header("Animation Settings - Gun")]
     public float gunRecoilDistance = 0.2f;
     public float gunRecoilSpeed = 20f;
@@ -80,6 +89,7 @@ public class WeaponDisplay : MonoBehaviour
             originalLocalPosition = weaponHolder.localPosition;
 
         currentAmmo = maxAmmo;
+        currentShotgunAmmo = maxShotgunAmmo;
         ammoDisplay = FindAnyObjectByType<AmmoDisplay>();
         ammoDisplay?.UpdateAmmoUI(); // Muestra balas al inicio
 
@@ -236,6 +246,9 @@ public class WeaponDisplay : MonoBehaviour
                 break;
             case "Shotgun":
                 weaponRenderer.sprite = shotgunSprite;
+                // 🟢 ACTUALIZAR MUNICIÓN para SHOTGUN
+                currentAmmo = currentShotgunAmmo;
+                maxAmmo = maxShotgunAmmo;
                 break;
             case "Coke":
                 weaponRenderer.sprite = cokeSprite;
@@ -248,6 +261,8 @@ public class WeaponDisplay : MonoBehaviour
                 break;
             default:
                 weaponRenderer.sprite = selectedItem.itemIcon;
+                currentAmmo = 0;
+                maxAmmo = 0;
                 break;
         }
         ammoDisplay?.UpdateAmmoUI();
@@ -330,9 +345,29 @@ public class WeaponDisplay : MonoBehaviour
                 }
                 break;
             case "Shotgun":
-                // Podrías añadir lógica de munición y FireBullet para Shotgun aquí
-                StartCoroutine(GunRecoilAnimation());
-                FireBullet(); // Asumiendo que usa FireBullet o similar
+                if (isReloading)
+                    return;
+
+                if (currentShotgunAmmo <= 0) // Usamos la munición de escopeta
+                {
+                    Debug.Log("¡Escopeta sin cartuchos! Recarga con 'R'");
+                    return;
+                }
+
+                if (Time.time - lastShotgunFireTime >= shotgunFireRate)
+                {
+                    StartCoroutine(GunRecoilAnimation());
+                    FireShotgun();
+
+                    currentShotgunAmmo--;
+
+                    // 🟢 Sincronizar las variables leídas por AmmoDisplay inmediatamente
+                    currentAmmo = currentShotgunAmmo;
+
+                    ammoDisplay?.UpdateAmmoUI();
+                    Debug.Log("Cartuchos restantes: " + currentShotgunAmmo);
+                    lastShotgunFireTime = Time.time;
+                }
                 break;
             case "Grenade":
                 StartCoroutine(ThrowAnimation());
@@ -344,6 +379,55 @@ public class WeaponDisplay : MonoBehaviour
                 Debug.Log("Este item no tiene animación");
                 break;
         }
+    }
+
+    private void FireShotgun()
+    {
+        if (bulletPrefab == null || firePoint == null)
+        {
+            Debug.LogWarning("BulletPrefab o FirePoint no asignado para Shotgun!");
+            return;
+        }
+
+        // Reproducir sonido
+        if (audioSource != null && gunShotClip != null)
+        {
+            audioSource.PlayOneShot(gunShotClip);
+        }
+
+        // Obtener la posición del mouse
+        Vector3 mousePos = Mouse.current.position.ReadValue();
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mousePos);
+        mouseWorldPos.z = 0f;
+
+        // 🟢 VARIABLES LOCALES DEFINIDAS CORRECTAMENTE AQUÍ
+        Vector2 centerDirection = (mouseWorldPos - firePoint.position).normalized;
+        float centerAngle = Mathf.Atan2(centerDirection.y, centerDirection.x) * Mathf.Rad2Deg;
+
+        // Bucle para disparar múltiples perdigones
+        for (int i = 0; i < pelletsPerShot; i++)
+        {
+            float randomSpread = Random.Range(-shotgunSpreadAngle / 2f, shotgunSpreadAngle / 2f);
+            float finalAngle = centerAngle + randomSpread;
+
+            Vector2 pelletDirection = new Vector2(
+                Mathf.Cos(finalAngle * Mathf.Deg2Rad),
+                Mathf.Sin(finalAngle * Mathf.Deg2Rad)
+            ).normalized;
+
+            GameObject pellet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+            // ... (Ajustar rotación visual del perdigón)
+
+            // Enviar la dirección y el daño al script de la bala
+            Bullet bulletScript = pellet.GetComponent<Bullet>();
+            if (bulletScript != null)
+            {
+                // bulletScript.SetDamage(shotgunPelletDamage); // Usar si tienes SetDamage
+                bulletScript.SetDirection(pelletDirection);
+            }
+        }
+        Debug.Log($"Shotgun disparó {pelletsPerShot} perdigones.");
     }
 
     private void FireBullet()
@@ -391,21 +475,46 @@ public class WeaponDisplay : MonoBehaviour
         Debug.Log("Disparo ejecutado hacia: " + direction);
     }
 
+
     private IEnumerator ReloadGun()
     {
-        if (currentAmmo == maxAmmo)
+        if (selectedItem == null)
+        {
+            Debug.Log("Nada equipado para recargar.");
+            yield break;
+        }
+
+        bool isShotgun = (selectedItem.itemName == "Shotgun");
+
+        // ❌ ERROR CORREGIDO: Usamos variables locales para la comprobación y luego actualizamos las variables reales.
+
+        int currentWeaponAmmo = isShotgun ? currentShotgunAmmo : currentAmmo;
+        int maxWeaponAmmo = isShotgun ? maxShotgunAmmo : maxAmmo;
+
+        if (currentWeaponAmmo == maxWeaponAmmo)
         {
             Debug.Log("Cargador lleno");
             yield break;
         }
 
         isReloading = true;
-        Debug.Log("Recargando...");
+        Debug.Log($"Recargando {(isShotgun ? "Escopeta" : "Pistola")}...");
 
-        // (Opcional) Aquí podrías reproducir sonido de recarga
         yield return new WaitForSeconds(reloadTime);
 
-        currentAmmo = maxAmmo;
+        // 🟢 CLAVE: Actualizamos las variables correctas
+        if (isShotgun)
+        {
+            currentShotgunAmmo = maxShotgunAmmo;
+            // Sincronizar la variable pública que AmmoDisplay lee
+            currentAmmo = maxShotgunAmmo;
+            maxAmmo = maxShotgunAmmo;
+        }
+        else // Es la Pistola ("Gun")
+        {
+            currentAmmo = maxAmmo;
+        }
+
         ammoDisplay?.UpdateAmmoUI();
         isReloading = false;
         Debug.Log("Recarga completa");
