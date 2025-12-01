@@ -7,7 +7,7 @@ public class VideoTrigger : MonoBehaviour
 {
     [Header("Configuración de Video y Escena")]
     [Tooltip("El nombre exacto de la escena de inicio (MainMenu, StartScreen, etc.)")]
-    public RawImage videoScreen;
+    private RawImage videoScreen;
     public string mainMenuSceneName = "Menu";
 
     private VideoPlayer videoPlayer;
@@ -24,7 +24,6 @@ public class VideoTrigger : MonoBehaviour
 
     void Awake()
     {
-        // Obtener el componente VideoPlayer en este mismo objeto
         videoPlayer = GetComponent<VideoPlayer>();
 
         if (videoPlayer == null)
@@ -33,7 +32,14 @@ public class VideoTrigger : MonoBehaviour
             enabled = false;
         }
 
-        // 🟢 Asignar el evento que se dispara cuando el video termina de reproducirse
+        // 🟢 BUSCAR DINÁMICAMENTE el RawImage persistente
+        videoScreen = FindObjectOfType<RawImage>(true); // El 'true' busca también objetos inactivos
+
+        if (videoScreen == null)
+        {
+            Debug.LogWarning("Advertencia: No se encontró la RawImage 'videoScreen' en la escena.");
+        }
+
         videoPlayer.loopPointReached += OnVideoFinished;
     }
 

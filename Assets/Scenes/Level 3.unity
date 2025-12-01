@@ -6422,6 +6422,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
@@ -6564,6 +6568,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
@@ -6852,6 +6860,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: maxHealth
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: currentHealth
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_Name
       value: Enemy2
@@ -6861,6 +6881,10 @@ PrefabInstance:
       value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: damageInterval
       value: 5
       objectReference: {fileID: 0}
@@ -6868,13 +6892,17 @@ PrefabInstance:
       propertyPath: obstacleLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 3045827010918860482, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: playerAwarenessDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.67
+      value: 24.82
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.98
+      value: -4.82
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7588,6 +7616,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (8)
@@ -7602,11 +7634,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.18
+      value: 10.7
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.12
+      value: -2.91
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7736,6 +7768,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (11)
@@ -7806,6 +7842,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (6)
@@ -7820,11 +7860,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2399979
+      value: 1.31
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.870001
+      value: -17.7
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8006,6 +8046,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -8216,6 +8260,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: maxHealth
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: currentHealth
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_Name
       value: Enemy2 (4)
@@ -8225,12 +8281,20 @@ PrefabInstance:
       value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: damageInterval
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: obstacleLayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045827010918860482, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: playerAwarenessDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13404,6 +13468,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (19)
@@ -13882,6 +13950,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (13)
@@ -38661,6 +38733,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (4)
@@ -39101,6 +39177,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (12)
@@ -39171,6 +39251,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (7)
@@ -39392,6 +39476,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: maxHealth
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: currentHealth
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_Name
       value: Enemy2 (3)
@@ -39401,6 +39497,10 @@ PrefabInstance:
       value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: damageInterval
       value: 5
       objectReference: {fileID: 0}
@@ -39408,13 +39508,17 @@ PrefabInstance:
       propertyPath: obstacleLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 3045827010918860482, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: playerAwarenessDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.8
+      value: -0.83
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.89
+      value: 4.42
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39600,6 +39704,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (16)
@@ -41432,6 +41540,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (5)
@@ -42074,6 +42186,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: maxHealth
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: currentHealth
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_Name
       value: Enemy2 (1)
@@ -42083,12 +42207,20 @@ PrefabInstance:
       value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: damageInterval
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: obstacleLayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045827010918860482, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: playerAwarenessDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42152,6 +42284,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (9)
@@ -43107,6 +43243,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (18)
@@ -44633,6 +44773,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: maxHealth
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: currentHealth
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_Name
       value: Enemy2 (5)
@@ -44642,12 +44794,20 @@ PrefabInstance:
       value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: damageInterval
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: obstacleLayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045827010918860482, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: playerAwarenessDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44748,6 +44908,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -45312,6 +45476,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (20)
@@ -45414,6 +45582,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (17)
@@ -46143,6 +46315,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: maxHealth
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: -5765124549628845102, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: currentHealth
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_Name
       value: Enemy2 (2)
@@ -46152,12 +46336,20 @@ PrefabInstance:
       value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: damageInterval
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: obstacleLayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045827010918860482, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
+      propertyPath: playerAwarenessDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3686681735386523586, guid: ac212f4266c4f1c4fa7ac4f8ea9843c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46717,6 +46909,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (10)
@@ -46920,6 +47116,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (15)
@@ -53827,6 +54027,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344613918}
     m_Modifications:
+    - target: {fileID: -9134145936048817184, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: m_Volume
+      value: 0.077
+      objectReference: {fileID: 0}
     - target: {fileID: 149220373185665837, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: m_Name
       value: Enemy (14)
