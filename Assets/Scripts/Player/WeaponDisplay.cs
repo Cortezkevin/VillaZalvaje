@@ -12,12 +12,16 @@ public class WeaponDisplay : MonoBehaviour
 
     private AmmoDisplay ammoDisplay;
 
+    private PlayerStats playerStats;
+
     [Header("Weapon Sprites")]
     public Sprite knifeSprite;
     public Sprite gunSprite;
     public Sprite grenadeSprite;
     public Sprite shotgunSprite;
     public Sprite cokeSprite;
+    public Sprite firstkitSprite;
+    public Sprite medicineSprite;
 
     // --- NUEVO: Configuración de Audio ---
     [Header("Audio Settings")]
@@ -82,6 +86,13 @@ public class WeaponDisplay : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
+
+        // AÑADIDO: Obtener la instancia de PlayerStats
+        playerStats = PlayerStats.Instance;
+        if (playerStats == null)
+        {
+            Debug.LogError("PlayerStats no encontrado. Asegúrate de que existe una instancia en la escena.");
+        }
     }
 
 
@@ -103,7 +114,52 @@ public class WeaponDisplay : MonoBehaviour
         {
             StartCoroutine(ReloadGun());
         }
+        if (Keyboard.current.eKey.wasPressedThisFrame && !isAnimating && selectedItem != null)
+        {
+            UseHealingItem();
+        }
 
+    }
+
+    private void UseHealingItem()
+    {
+        if (playerStats == null || InventoryManager.Instance == null) return;
+
+        ItemData item = InventoryManager.Instance.GetSelectedItem();
+
+        // 1. Verificar si hay un item seleccionado.
+        if (item == null) return;
+
+        // 2. Obtener el índice del slot seleccionado.
+        int selectedSlotIndex = InventoryManager.Instance.GetSelectedSlot();
+        if (selectedSlotIndex == -1) return; // Por seguridad
+
+        int healAmount = 0;
+
+        switch (item.itemName)
+        {
+            case "Firstkit": // Curación de 70 puntos
+                healAmount = 70;
+                break;
+            case "Medicine": // Curación de 30 puntos
+                healAmount = 30;
+                break;
+            default:
+                // Si el item seleccionado no es de curación, no hace nada
+                Debug.Log($"El item {item.itemName} no es un item de curación.");
+                return;
+        }
+
+        // 3. Verificar si el jugador necesita curarse
+        if (playerStats.GetCurrentHealth() < playerStats.GetMaxHealth())
+        {
+            // Intentar curar y pasar el índice del slot para que PlayerStats lo consuma
+            playerStats.Heal(healAmount, selectedSlotIndex);
+        }
+        else
+        {
+            Debug.Log("La vida está al máximo. No se necesita curación.");
+        }
     }
 
     private void UpdateWeaponDisplay()
@@ -141,6 +197,12 @@ public class WeaponDisplay : MonoBehaviour
                 break;
             case "Coke":
                 weaponRenderer.sprite = cokeSprite;
+                break;
+            case "Firstkit":
+                weaponRenderer.sprite = firstkitSprite;
+                break;
+            case "Medicine":
+                weaponRenderer.sprite = medicineSprite;
                 break;
             default:
                 weaponRenderer.sprite = selectedItem.itemIcon;

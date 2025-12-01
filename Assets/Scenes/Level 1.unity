@@ -45775,7 +45775,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.8399987, y: -0.47, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 120150986}
@@ -45793,7 +45793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a33c4e6835894f34cbe6f5faadf0cb3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 0d7e30b7869eab34a9fd9625448a70f9, type: 2}
+  itemData: {fileID: 11400000, guid: 1cb928fe6456d0547bc90d22a5395927, type: 2}
   pickupRange: 0.5
   pickupIndicator: {fileID: 120150985}
 --- !u!61 &1466688347
@@ -45834,7 +45834,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.25}
+    oldSize: {x: 0.625, y: 0.625}
     newSize: {x: 1, y: 0.3125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -48732,6 +48732,8 @@ MonoBehaviour:
   grenadeSprite: {fileID: 21300000, guid: 8c90dbbbaacda5a45b6ae9b6c129519d, type: 3}
   shotgunSprite: {fileID: 21300000, guid: edaee56eb8b7dbe40a3e833f940138fa, type: 3}
   cokeSprite: {fileID: 21300000, guid: 45f3373095a1934419d8c605b4a17e3c, type: 3}
+  firstkitSprite: {fileID: 21300000, guid: 084a5f0db561d6c4f81861f04d5f9a39, type: 3}
+  medicineSprite: {fileID: 21300000, guid: 45f3373095a1934419d8c605b4a17e3c, type: 3}
   audioSource: {fileID: 1864130391}
   gunShotClip: {fileID: 8300000, guid: da3e26d6700392841a9c81a8033ea537, type: 3}
   knifeSlashClip: {fileID: 8300000, guid: ffe7badff539254409ed72e14e1f79ca, type: 3}
@@ -58632,7 +58634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a33c4e6835894f34cbe6f5faadf0cb3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 0d7e30b7869eab34a9fd9625448a70f9, type: 2}
+  itemData: {fileID: 11400000, guid: 44d676dc85fa0874e85ca7628f3cd9b7, type: 2}
   pickupRange: 0.5
   pickupIndicator: {fileID: 1134229835}
 --- !u!61 &2048300886

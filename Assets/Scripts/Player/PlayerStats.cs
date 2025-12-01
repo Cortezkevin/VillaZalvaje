@@ -77,13 +77,42 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void Heal(int amount)
+    public void Heal(int amount, int usedSlotIndex)
     {
+        if (currentHealth >= maxHealth)
+        {
+            Debug.Log("Vida ya al máximo. Curación cancelada.");
+            return;
+        }
+
+        int previousHealth = currentHealth;
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        int actualHeal = currentHealth - previousHealth;
 
-        Debug.Log($"Player curado {amount} puntos. Vida: {currentHealth}/{maxHealth}");
-        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        // Solo procedemos si realmente se curó algo
+        if (actualHeal > 0)
+        {
+            // El nombre del item se obtiene desde el InventoryManager solo para el Debug
+            ItemData usedItem = InventoryManager.Instance?.GetInventory().Count > usedSlotIndex ? InventoryManager.Instance.GetInventory()[usedSlotIndex] : null;
+            string itemName = usedItem != null ? usedItem.itemName : "Item Desconocido";
+
+            Debug.Log($"Player curado {actualHeal} puntos con {itemName}. Vida: {currentHealth}/{maxHealth}");
+            OnHealthChanged?.Invoke(currentHealth, maxHealth);
+
+            // ✅ NUEVO: Consumir el item del inventario usando el índice del slot
+            if (InventoryManager.Instance != null)
+            {
+                // Usamos el método RemoveItem(int slotIndex) que ya tienes
+                InventoryManager.Instance.RemoveItem(usedSlotIndex);
+                Debug.Log($"Item en slot {usedSlotIndex} consumido.");
+            }
+        }
+        else
+        {
+            // Esto puede suceder si la curación era 0 o ya estaba al máximo (aunque se comprueba arriba)
+            Debug.Log($"Curación cancelada: La vida ya está al máximo.");
+        }
     }
 
     private void Die()
