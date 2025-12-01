@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ba2dadf50d436104eb6eca637d84d47c
+guid: aaa5f8d2308ec1841bb2c6b2ed51261c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2621257775803237152
-    second: Zombie-Tileset---_0078_Capa-79_0
+      213: -784893157452753096
+    second: Zombie-Tileset---_0078_Capa-78_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zombie-Tileset---_0078_Capa-79_0
+      name: Zombie-Tileset---_0078_Capa-78_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0238b7f1f04906420800000000000000
-      internalID: 2621257775803237152
+      spriteID: 837d463f4df7b15f0800000000000000
+      internalID: -784893157452753096
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Zombie-Tileset---_0078_Capa-79_0: 2621257775803237152
+      Zombie-Tileset---_0078_Capa-78_0: -784893157452753096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Zombie-Tileset---_0077_Capa-78_1
+  m_Name: Zombie-Tileset---_0079_Capa-79
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 08760a12ac8366443a3a17784ffa73a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e880d048a5f02334a8881a1131e2b6b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

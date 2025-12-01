@@ -1,13 +1,14 @@
+Ôªøusing System.Collections;
 using UnityEngine;
 
 public class SoundtrackController : MonoBehaviour
 {
     [Header("Soundtrack Configuration")]
     [SerializeField] private AudioClip[] soundtracks; // Array de soundtracks disponibles
-    [SerializeField] private int initialSoundtrackIndex = 0; // Õndice inicial
+    [SerializeField] private int initialSoundtrackIndex = 0; // √çndice inicial
     [SerializeField] private float volume = 0.5f;
     [SerializeField] private bool loop = true;
-    [SerializeField] private float fadeTime = 1f; // Tiempo de transiciÛn entre canciones
+    [SerializeField] private float fadeTime = 1f; // Tiempo de transici√≥n entre canciones
 
     [Header("Combat Music Settings")]
     [SerializeField] private int explorationMusicIndex = 0;
@@ -31,7 +32,7 @@ public class SoundtrackController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            // DontDestroyOnLoad(gameObject); // Descomenta si quieres que persista
+            // DontDestroyOnLoad(gameObject); // si quieres que persista entre escenas
         }
         else
         {
@@ -39,7 +40,6 @@ public class SoundtrackController : MonoBehaviour
             return;
         }
 
-        // Configurar AudioSource
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
@@ -48,26 +48,32 @@ public class SoundtrackController : MonoBehaviour
 
         audioSource.loop = loop;
         audioSource.volume = volume;
+
+        StartCoroutine(PreloadAllTracks());
     }
 
-    void Start()
+    private IEnumerator PreloadAllTracks()
     {
-        // Reproducir soundtrack inicial
-        if (soundtracks.Length > 0 && initialSoundtrackIndex < soundtracks.Length)
+        foreach (var clip in soundtracks)
         {
-            PlaySoundtrack(initialSoundtrackIndex);
-        }
-        else
-        {
-            Debug.LogWarning("No hay soundtracks asignados o el Ìndice inicial es inv·lido.");
+            if (clip == null) continue;
+
+            // Si no est√° cargado, p√≠dele a Unity que cargue los datos de audio
+            if (!clip.preloadAudioData && clip.loadState == AudioDataLoadState.Unloaded)
+            {
+                clip.LoadAudioData();
+                // Espera hasta que termine de cargar para no bloquear todo de golpe
+                while (clip.loadState == AudioDataLoadState.Loading)
+                    yield return null;
+            }
         }
     }
 
     #region Combat Music Management
 
-    
+
     /// Llamado cuando un enemigo detecta al jugador
-    
+
     public void RegisterEnemyAwareness()
     {
         enemiesAware++;
@@ -96,7 +102,7 @@ public class SoundtrackController : MonoBehaviour
     private void EnterCombat()
     {
         inCombat = true;
-        Debug.Log("°Entrando en combate!");
+        Debug.Log("¬°Entrando en combate!");
         ChangeSoundtrack(combatMusicIndex);
     }
 
@@ -122,19 +128,19 @@ public class SoundtrackController : MonoBehaviour
     #region Soundtrack Control
 
     
-    /// Cambia al soundtrack especificado por Ìndice
+    /// Cambia al soundtrack especificado por √≠ndice
     
     public void ChangeSoundtrack(int index)
     {
         if (index < 0 || index >= soundtracks.Length)
         {
-            Debug.LogError($"Õndice {index} fuera de rango. Hay {soundtracks.Length} soundtracks disponibles.");
+            Debug.LogError($"√çndice {index} fuera de rango. Hay {soundtracks.Length} soundtracks disponibles.");
             return;
         }
 
         if (index == currentIndex && audioSource.isPlaying)
         {
-            Debug.Log("Ya est· reproduciendo este soundtrack.");
+            Debug.Log("Ya est√° reproduciendo este soundtrack.");
             return;
         }
 
@@ -149,7 +155,7 @@ public class SoundtrackController : MonoBehaviour
     {
         if (index < 0 || index >= soundtracks.Length)
         {
-            Debug.LogError($"Õndice {index} fuera de rango.");
+            Debug.LogError($"√çndice {index} fuera de rango.");
             return;
         }
 
@@ -160,7 +166,7 @@ public class SoundtrackController : MonoBehaviour
     }
 
     
-    /// TransiciÛn suave entre soundtracks
+    /// Transici√≥n suave entre soundtracks
     
     private System.Collections.IEnumerator FadeToNewTrack(int newIndex)
     {
@@ -175,7 +181,7 @@ public class SoundtrackController : MonoBehaviour
             yield return null;
         }
 
-        // Cambiar canciÛn
+        // Cambiar canci√≥n
         audioSource.Stop();
         currentIndex = newIndex;
         audioSource.clip = soundtracks[newIndex];
@@ -195,7 +201,7 @@ public class SoundtrackController : MonoBehaviour
     }
 
     
-    /// Pausa la m˙sica
+    /// Pausa la m√∫sica
     
     public void Pause()
     {
@@ -203,7 +209,7 @@ public class SoundtrackController : MonoBehaviour
     }
 
     
-    /// Resume la m˙sica
+    /// Resume la m√∫sica
     
     public void Resume()
     {
@@ -211,7 +217,7 @@ public class SoundtrackController : MonoBehaviour
     }
 
     
-    /// Detiene la m˙sica
+    /// Detiene la m√∫sica
     
     public void Stop()
     {
@@ -228,7 +234,7 @@ public class SoundtrackController : MonoBehaviour
     }
 
     
-    /// Obtiene el Ìndice actual
+    /// Obtiene el √≠ndice actual
     
     public int GetCurrentIndex()
     {
