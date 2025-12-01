@@ -70,5 +70,8 @@ TagManager:
   - name: Enemy
     uniqueID: 1691054237
     locked: 0
+  - name: GrenadeProjectile
+    uniqueID: 747034195
+    locked: 0
   m_RenderingLayers:
   - Default
