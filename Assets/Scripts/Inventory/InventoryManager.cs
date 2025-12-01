@@ -51,8 +51,33 @@ public class InventoryManager : MonoBehaviour
         {
             SwitchSlot();
         }
-    }
 
+        if (Keyboard.current.tKey.wasPressedThisFrame)
+        {
+            DropSelectedItem();
+        }
+    }
+    public void DropSelectedItem()
+    {
+        // 1. Verificar si hay un slot seleccionado y si ese slot contiene un ítem
+        if (selectedSlot < 0 || selectedSlot >= inventory.Count)
+        {
+            Debug.Log("No hay ítem seleccionado para soltar.");
+            return;
+        }
+
+        ItemData itemToDrop = inventory[selectedSlot];
+
+        // 2. Llamar a la lógica de soltar ítem en el mundo
+        DropItem(itemToDrop);
+
+        // 3. Eliminar el ítem del inventario (usa el método RemoveItem existente)
+        RemoveItem(selectedSlot);
+
+        Debug.Log($"Ítem {itemToDrop.itemName} soltado del Slot {selectedSlot}.");
+
+        // RemoveItem ya llama a UpdateUI y UpdateSelection.
+    }
 
     public void ClearInventory()
     {
