@@ -51,13 +51,17 @@ public class WeaponDisplay : MonoBehaviour
     public int knifeDamage = 25;
     public float knifeAngle = 45f;
 
+    [Header("Sincronización de Munición (Lectura UI)")]
+    public int displayCurrentAmmo; // 🟢 NUEVO: Valor actual sincronizado para AmmoDisplay
+    public int displayMaxAmmo;     // 🟢 NUEVO: Valor máximo sincronizado para AmmoDisplay
+
     [Header("Gun Settings")]
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float fireRate = 0.3f;
     private float lastFireTime;
-    public int maxAmmo = 7;
-    public int currentAmmo;
+    public int gunMaxAmmo = 7;       // ⬅️ Renombrado
+    public int gunCurrentAmmo;     // ⬅️ Renombrado
     public float reloadTime = 1.5f;
     private bool isReloading = false;
 
@@ -88,7 +92,7 @@ public class WeaponDisplay : MonoBehaviour
         if (weaponHolder != null)
             originalLocalPosition = weaponHolder.localPosition;
 
-        currentAmmo = maxAmmo;
+        gunCurrentAmmo = gunMaxAmmo;
         currentShotgunAmmo = maxShotgunAmmo;
         ammoDisplay = FindAnyObjectByType<AmmoDisplay>();
         ammoDisplay?.UpdateAmmoUI(); // Muestra balas al inicio
@@ -236,19 +240,21 @@ public class WeaponDisplay : MonoBehaviour
         switch (selectedItem.itemName)
         {
             case "Knife":
-                weaponRenderer.sprite = knifeSprite;
-                break;
+            weaponRenderer.sprite = knifeSprite;
+            break;
+
             case "Gun":
                 weaponRenderer.sprite = gunSprite;
+                // 🟢 SINCRONIZACIÓN CLAVE: Pistola
+                displayCurrentAmmo = gunCurrentAmmo;
+                displayMaxAmmo = gunMaxAmmo;
                 break;
-            case "Grenade":
-                weaponRenderer.sprite = grenadeSprite;
-                break;
+
             case "Shotgun":
                 weaponRenderer.sprite = shotgunSprite;
-                // 🟢 ACTUALIZAR MUNICIÓN para SHOTGUN
-                currentAmmo = currentShotgunAmmo;
-                maxAmmo = maxShotgunAmmo;
+                // 🟢 SINCRONIZACIÓN CLAVE: Escopeta
+                displayCurrentAmmo = currentShotgunAmmo;
+                displayMaxAmmo = maxShotgunAmmo;
                 break;
             case "Coke":
                 weaponRenderer.sprite = cokeSprite;
@@ -261,8 +267,8 @@ public class WeaponDisplay : MonoBehaviour
                 break;
             default:
                 weaponRenderer.sprite = selectedItem.itemIcon;
-                currentAmmo = 0;
-                maxAmmo = 0;
+                displayCurrentAmmo = 0;
+                displayMaxAmmo = 0;
                 break;
         }
         ammoDisplay?.UpdateAmmoUI();
@@ -328,7 +334,7 @@ public class WeaponDisplay : MonoBehaviour
                 if (isReloading)
                     return;
 
-                if (currentAmmo <= 0)
+                if (gunCurrentAmmo <= 0) // ⬅️ Usar gunCurrentAmmo
                 {
                     Debug.Log("¡Sin balas! Recarga con 'R'");
                     return;
@@ -337,10 +343,12 @@ public class WeaponDisplay : MonoBehaviour
                 if (Time.time - lastFireTime >= fireRate)
                 {
                     StartCoroutine(GunRecoilAnimation());
-                    FireBullet(); // Se llama a FireBullet, donde se reproduce el audio
-                    currentAmmo--;
+                    FireBullet();
+
+                    gunCurrentAmmo--; // ⬅️ Decrementar gunCurrentAmmo
+                    displayCurrentAmmo = gunCurrentAmmo; // 🟢 Sincronizar inmediatamente
+
                     ammoDisplay?.UpdateAmmoUI();
-                    Debug.Log("Balas restantes: " + currentAmmo);
                     lastFireTime = Time.time;
                 }
                 break;
@@ -361,8 +369,7 @@ public class WeaponDisplay : MonoBehaviour
 
                     currentShotgunAmmo--;
 
-                    // 🟢 Sincronizar las variables leídas por AmmoDisplay inmediatamente
-                    currentAmmo = currentShotgunAmmo;
+                    displayCurrentAmmo = currentShotgunAmmo;
 
                     ammoDisplay?.UpdateAmmoUI();
                     Debug.Log("Cartuchos restantes: " + currentShotgunAmmo);
@@ -488,8 +495,8 @@ public class WeaponDisplay : MonoBehaviour
 
         // ❌ ERROR CORREGIDO: Usamos variables locales para la comprobación y luego actualizamos las variables reales.
 
-        int currentWeaponAmmo = isShotgun ? currentShotgunAmmo : currentAmmo;
-        int maxWeaponAmmo = isShotgun ? maxShotgunAmmo : maxAmmo;
+        int currentWeaponAmmo = isShotgun ? currentShotgunAmmo : gunCurrentAmmo; // ⬅️ Usar gunCurrentAmmo
+        int maxWeaponAmmo = isShotgun ? maxShotgunAmmo : gunMaxAmmo;           // ⬅️ Usar gunMaxAmmo
 
         if (currentWeaponAmmo == maxWeaponAmmo)
         {
@@ -506,13 +513,14 @@ public class WeaponDisplay : MonoBehaviour
         if (isShotgun)
         {
             currentShotgunAmmo = maxShotgunAmmo;
-            // Sincronizar la variable pública que AmmoDisplay lee
-            currentAmmo = maxShotgunAmmo;
-            maxAmmo = maxShotgunAmmo;
+            displayCurrentAmmo = maxShotgunAmmo;
+            displayMaxAmmo = maxShotgunAmmo;
         }
-        else // Es la Pistola ("Gun")
+        else // Pistola
         {
-            currentAmmo = maxAmmo;
+            gunCurrentAmmo = gunMaxAmmo;
+            displayCurrentAmmo = gunMaxAmmo;
+            displayMaxAmmo = gunMaxAmmo;
         }
 
         ammoDisplay?.UpdateAmmoUI();

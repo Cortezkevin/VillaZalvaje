@@ -33,15 +33,14 @@ public class AmmoDisplay : MonoBehaviour
 
         // Mostrar el contador de balas o mensaje de recarga
         // **Nota:** Los valores de currentAmmo/maxAmmo ya son sincronizados por WeaponDisplay.UpdateWeaponDisplay()
-        if (weaponDisplay.currentAmmo <= 0)
+        if (weaponDisplay.displayCurrentAmmo <= 0)
         {
             ammoText.text = "Press R";
             ammoText.color = Color.red;
         }
         else
         {
-            // Usa las variables currentAmmo/maxAmmo que WeaponDisplay sincroniza
-            ammoText.text = $"{weaponDisplay.currentAmmo} / {weaponDisplay.maxAmmo}";
+            ammoText.text = $"{weaponDisplay.displayCurrentAmmo} / {weaponDisplay.displayMaxAmmo}";
             ammoText.color = Color.white;
         }
     }
