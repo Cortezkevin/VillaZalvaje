@@ -9,6 +9,14 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private float rotationSpeed;
 
+    // EnemyMovement.cs
+
+    [Header("Steering & Obstacle Avoidance")]
+    [SerializeField] private LayerMask obstacleLayer; // Capa de los objetos a esquivar (ej: Paredes)
+    [SerializeField] private float raycastDistance = 1.0f; // Distancia para chequear obstáculos delante
+    [SerializeField] private float avoidForce = 5f; // Fuerza de desvío aplicada al vector de movimiento
+    private Vector2 avoidanceDirection = Vector2.zero;
+
     [Header("Combat Settings")]
     [SerializeField]
     private int damageAmount = 10; // Daño que hace al jugador
@@ -59,7 +67,52 @@ public class EnemyMovement : MonoBehaviour
     {
         if (playerAwernessController.AwareOfPlayer)
         {
-            targetDireccion = playerAwernessController.DirectionToPlayer;
+            // 1. Dirección base: Hacia el jugador
+            Vector2 directionToPlayer = playerAwernessController.DirectionToPlayer;
+
+            // 2. Ejecutar Raycast para detectar obstáculos
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, raycastDistance, obstacleLayer);
+
+            // 3. Determinar el vector de evasión
+            if (hit.collider != null)
+            {
+                // Hay un obstáculo delante.
+                Debug.DrawRay(transform.position, directionToPlayer * raycastDistance, Color.red);
+
+                // Calculamos una dirección perpendicular (para rodear el objeto)
+                // Se puede hacer de forma simple (rotando 90 grados) o buscando un lado libre.
+
+                // Método simple (rotación 90 grados):
+                Vector2 perpendicular = new Vector2(-directionToPlayer.y, directionToPlayer.x);
+
+                // Intentaremos determinar si girar a la izquierda o derecha es mejor.
+                // Para simplificar, elegiremos una dirección fija o aleatoria para empezar a girar.
+                // Aquí se usaría lógica avanzada, pero para empezar: girar 90 grados.
+                avoidanceDirection = perpendicular.normalized;
+
+                // Si quieres que pruebe a qué lado es mejor girar, puedes usar:
+                /*
+                float angleToObstacle = Vector2.SignedAngle(directionToPlayer, hit.normal);
+                avoidanceDirection = angleToObstacle > 0 ? perpendicular : -perpendicular;
+                */
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, directionToPlayer * raycastDistance, Color.green);
+                avoidanceDirection = Vector2.zero;
+            }
+
+            // 4. Mezclar las direcciones (Steering)
+            if (avoidanceDirection != Vector2.zero)
+            {
+                // Mezclamos la dirección al jugador con el vector de evasión
+                targetDireccion = (directionToPlayer + avoidanceDirection * avoidForce).normalized;
+            }
+            else
+            {
+                // Si no hay obstáculo, se mueve directamente hacia el jugador
+                targetDireccion = directionToPlayer;
+            }
         }
         else
         {

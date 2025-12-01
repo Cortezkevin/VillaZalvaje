@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 32297312}
   - component: {fileID: 32297311}
   - component: {fileID: 32297313}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6847,9 +6847,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 991780990}
     m_Modifications:
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: maxDamage
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: midDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: minDamage
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_Name
       value: Gas_Station (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7094347399224331354, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6963,7 +6979,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -7261,7 +7281,7 @@ GameObject:
   - component: {fileID: 148700412}
   - component: {fileID: 148700413}
   - component: {fileID: 148700414}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0193_Capa-194
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7401,9 +7421,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 991780990}
     m_Modifications:
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: maxDamage
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: midDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: minDamage
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_Name
       value: Gas_Station (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7094347399224331354, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7673,7 +7709,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -7802,9 +7842,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 991780990}
     m_Modifications:
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: maxDamage
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: midDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: minDamage
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_Name
       value: Gas_Station (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7094347399224331354, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7866,7 +7922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 237744209}
   - component: {fileID: 237744208}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7937,7 +7993,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -8012,7 +8072,7 @@ GameObject:
   - component: {fileID: 264647485}
   - component: {fileID: 264647486}
   - component: {fileID: 264647487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0190_Capa-191
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8152,7 +8212,7 @@ GameObject:
   - component: {fileID: 328412878}
   - component: {fileID: 328412879}
   - component: {fileID: 328412880}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0225_Capa-226
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8359,7 +8419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -8570,7 +8634,7 @@ GameObject:
   - component: {fileID: 389051651}
   - component: {fileID: 389051652}
   - component: {fileID: 389051653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0187_Capa-188
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9169,7 +9233,7 @@ GameObject:
   - component: {fileID: 506959583}
   - component: {fileID: 506959584}
   - component: {fileID: 506959585}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0179_Capa-180
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9312,7 +9376,7 @@ GameObject:
   - component: {fileID: 549847848}
   - component: {fileID: 549847847}
   - component: {fileID: 549847849}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Houses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10210,9 +10274,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 991780990}
     m_Modifications:
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: maxDamage
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: midDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: minDamage
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_Name
       value: Gas_Station (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7094347399224331354, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10294,7 +10374,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -10384,7 +10468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -10455,7 +10543,7 @@ GameObject:
   - component: {fileID: 611243869}
   - component: {fileID: 611243871}
   - component: {fileID: 611243870}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34873,9 +34961,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 991780990}
     m_Modifications:
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: maxDamage
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: midDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: minDamage
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_Name
       value: Gas_Station (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7094347399224331354, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34957,7 +35061,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -35030,7 +35138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 700013479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35078,7 +35186,7 @@ GameObject:
   - component: {fileID: 701627148}
   - component: {fileID: 701627149}
   - component: {fileID: 701627150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0186_Capa-187
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35444,7 +35552,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -35689,7 +35801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -41391,7 +41507,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -41485,7 +41605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -41554,7 +41678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 991780990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GasStations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41596,7 +41720,7 @@ GameObject:
   - component: {fileID: 1026348908}
   - component: {fileID: 1026348907}
   - component: {fileID: 1026348909}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Buildings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43367,7 +43491,7 @@ GameObject:
   - component: {fileID: 1082593444}
   - component: {fileID: 1082593445}
   - component: {fileID: 1082593446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0183_Capa-184
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43848,7 +43972,7 @@ GameObject:
   - component: {fileID: 1130741546}
   - component: {fileID: 1130741547}
   - component: {fileID: 1130741548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Structures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43956,9 +44080,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 991780990}
     m_Modifications:
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: maxDamage
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: midDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: minDamage
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_Name
       value: Gas_Station (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7094347399224331354, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44205,7 +44345,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -44299,7 +44443,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -44393,7 +44541,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -44798,7 +44950,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -44892,7 +45048,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -44968,7 +45128,7 @@ GameObject:
   - component: {fileID: 1261422876}
   - component: {fileID: 1261422877}
   - component: {fileID: 1261422878}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0225_Capa-226
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45175,7 +45335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -45300,7 +45464,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -45432,7 +45600,7 @@ GameObject:
   - component: {fileID: 1418458966}
   - component: {fileID: 1418458967}
   - component: {fileID: 1418458968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0184_Capa-185
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45594,7 +45762,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -45956,7 +46128,7 @@ GameObject:
   - component: {fileID: 1490710992}
   - component: {fileID: 1490710993}
   - component: {fileID: 1490710994}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0185_Capa-186
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46336,9 +46508,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 991780990}
     m_Modifications:
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: maxDamage
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: midDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: minDamage
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_Name
       value: Gas_Station (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7094347399224331354, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46593,7 +46781,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -46664,7 +46856,7 @@ GameObject:
   - component: {fileID: 1620196636}
   - component: {fileID: 1620196637}
   - component: {fileID: 1620196638}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0189_Capa-190
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46809,7 +47001,7 @@ GameObject:
   - component: {fileID: 1628091922}
   - component: {fileID: 1628091921}
   - component: {fileID: 1628091923}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47531,7 +47723,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -47625,7 +47821,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -47700,7 +47900,7 @@ GameObject:
   - component: {fileID: 1716355261}
   - component: {fileID: 1716355262}
   - component: {fileID: 1716355263}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0180_Capa-181
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47863,7 +48063,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -47934,7 +48138,7 @@ GameObject:
   - component: {fileID: 1722331676}
   - component: {fileID: 1722331677}
   - component: {fileID: 1722331678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0182_Capa-183
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48073,7 +48277,7 @@ GameObject:
   - component: {fileID: 1722713663}
   - component: {fileID: 1722713664}
   - component: {fileID: 1722713665}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0192_Capa-193
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48212,7 +48416,7 @@ GameObject:
   - component: {fileID: 1824596330}
   - component: {fileID: 1824596331}
   - component: {fileID: 1824596332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0191_Capa-192
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48378,7 +48582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -48453,7 +48661,7 @@ GameObject:
   - component: {fileID: 1844962057}
   - component: {fileID: 1844962058}
   - component: {fileID: 1844962059}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0181_Capa-182
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48616,7 +48824,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -48743,14 +48955,20 @@ MonoBehaviour:
   knifeSlashAngle: 20
   knifeSlashSpeed: 15
   knifeRange: 0.6
-  knifeDamage: 25
-  knifeAngle: 45
+  knifeDamage: 15
+  knifeAngle: 90
   bulletPrefab: {fileID: 2280460282126546803, guid: 75f317eb481b4ed4e902588b2e772a2f, type: 3}
   firePoint: {fileID: 1325065433}
   fireRate: 0.3
   maxAmmo: 7
   currentAmmo: 0
   reloadTime: 1.5
+  maxShotgunAmmo: 4
+  currentShotgunAmmo: 0
+  pelletsPerShot: 4
+  shotgunFireRate: 1.2
+  shotgunPelletDamage: 8
+  shotgunSpreadAngle: 15
   gunRecoilDistance: 0.2
   gunRecoilSpeed: 20
   throwDistance: 1
@@ -48937,7 +49155,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -49177,7 +49399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -49252,7 +49478,7 @@ GameObject:
   - component: {fileID: 1914685506}
   - component: {fileID: 1914685507}
   - component: {fileID: 1914685508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie-Tileset---_0188_Capa-189
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49416,7 +49642,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -49816,7 +50046,7 @@ GameObject:
   - component: {fileID: 2006229591}
   - component: {fileID: 2006229593}
   - component: {fileID: 2006229592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Highway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52183,7 +52413,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 19
+      m_TileSpriteIndex: 33
       m_TileMatrixIndex: 6
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -52263,7 +52493,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 11
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 31
       m_TileMatrixIndex: 6
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -52273,7 +52503,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 10
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 30
       m_TileMatrixIndex: 6
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -52283,7 +52513,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 29
       m_TileMatrixIndex: 6
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -58032,10 +58262,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 7110582677875523775, guid: 86007915927e12b4e9d17d14ccc5fa8c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -3176967872200533690, guid: e678a5b07e5bc9e4f830e68132625570, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 7948622815732664729, guid: a1817956941bdf84ca07dfba2945ef2a, type: 3}
   - m_RefCount: 2
@@ -58046,16 +58276,16 @@ Tilemap:
     m_Data: {fileID: 286646362678191848, guid: a74f8b577911d974eae2554a030da767, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: 21300000, guid: f545e9bbe641a794e87849ce26350fe2, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: -4188044669363470541, guid: 522c5a2690d75fa4bb144f9d01273bae, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 6
     m_Data: {fileID: 21300000, guid: 53c1cdff62583f345a1c68ece721e37c, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 21300000, guid: 2c2827b54f1bb5c45b90e06ba3e30270, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: -3347404726121398367, guid: 679284eff42d34141b50c7b5e2e7d8b2, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -8445666162645571588, guid: d17d4f4bebd2ba24e95ce3983dbce097, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 7
     m_Data: {fileID: 21300000, guid: 20b467c10f193c341b40ca456f1d692e, type: 3}
   - m_RefCount: 18
@@ -58074,16 +58304,16 @@ Tilemap:
     m_Data: {fileID: 6123766290509489025, guid: 9f552d44bb84ef9468434644ba0362a8, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: 7523303309917090181, guid: ba32bc6953cbef042b33b5e6c21725f5, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 7110582677875523775, guid: 86007915927e12b4e9d17d14ccc5fa8c, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -3176967872200533690, guid: e678a5b07e5bc9e4f830e68132625570, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -4188044669363470541, guid: 522c5a2690d75fa4bb144f9d01273bae, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1182694478942898011, guid: 2d6013b8bfc05ee41ad8572ab6bad989, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -8445666162645571588, guid: d17d4f4bebd2ba24e95ce3983dbce097, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1278278239317339502, guid: 45722e27299050f4a8600669de7ad730, type: 3}
   - m_RefCount: 1
@@ -58272,7 +58502,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078747502222584103, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3045827010918860482, guid: 066dcc78d6f8c164d8c718f0b650117b, type: 3}
       propertyPath: playerAwarenessDistance
@@ -58906,9 +59140,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 991780990}
     m_Modifications:
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: maxDamage
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: midDamage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 726710505009880899, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: minDamage
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_Name
       value: Gas_Station
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785344766322923042, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7094347399224331354, guid: c1317bab9cf92254eaf5caa30677a915, type: 3}
       propertyPath: m_LocalPosition.x
